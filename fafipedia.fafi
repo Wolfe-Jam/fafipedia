@@ -248,14 +248,9 @@ entries:
   # (faf-cli README, locked doctrines). Long tail stays reactive.
   # ═══════════════════════════════════════════════════════════════
 
-  # === What FAF is / identity ===
-  - id: what_is_faf
-    type: Fact
-    category: format
-    key: what is FAF
-    value: "FAF = Foundational AI-context Format. IANA-registered structured AI context (application/vnd.faf+yaml). Project DNA for ANY AI — a project.faf file that versions with your code so AI starts every session already knowing the project. You have a package.json; AI needs a project.faf."
-    eternal: true
-    source: "github.com/Wolfe-Jam/faf-cli (README)"
+  # === Identity — see canonical what_is_faf at top of file ===
+  # (legacy duplicate retired 2026-05-20: carried old "Project DNA for ANY AI"
+  # line; canonical lives at the top with "Persistent project context for AI".)
 
   - id: faf_vrom_tagline
     type: Fact

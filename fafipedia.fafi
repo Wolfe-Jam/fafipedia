@@ -260,6 +260,15 @@ entries:
     eternal: true
     source: "FAF brand register"
 
+  - id: drift_tax
+    type: Fact
+    category: philosophy
+    key: drift tax (AI without FAF)
+    value: "AI without FAF = RAM-only (drift tax). AI with FAF = vROM + RAM (boots from a known state)."
+    aliases: ["drift tax", "what is the drift tax", "the drift tax", "ai without faf", "ai with faf", "ram only", "ram-only", "ram vs vrom", "vrom plus ram", "boots from a known state", "AI without FAF", "AI with FAF"]
+    eternal: true
+    source: "FAF brand register"
+
   - id: vrom_definition
     type: Fact
     category: philosophy

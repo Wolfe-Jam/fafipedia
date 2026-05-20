@@ -28,32 +28,35 @@ entries:
     type: Fact
     category: format
     key: application/vnd.faf+yaml
-    value: "IANA registered"
+    value: "application/vnd.faf+yaml — IANA-registered media type for .faf, registered October 31, 2025. Same recognition class as application/pdf, application/json, application/xml. The first IANA-registered media type for AI context. Official Internet standard."
+    aliases: ["iana faf", "vnd.faf+yaml", "faf media type", "faf iana", "iana registration faf", "is faf iana registered", "faf standard"]
     eternal: true
-    registered: "2025-10"
-    source: "IANA"
+    registered: "2025-10-31"
+    source: "IANA media-type registry (https://www.iana.org/assignments/media-types/application/vnd.faf+yaml)"
 
   - id: iana_fafm
     type: Fact
     category: format
     key: application/vnd.fafm+yaml
-    value: "IANA registered"
+    value: "application/vnd.fafm+yaml — IANA-registered media type for .fafm (Voice Memory Layer), registered May 13, 2026. Sister media type to vnd.faf+yaml. Carries persistent voice/agent memory across sessions and runtimes."
+    aliases: ["iana fafm", "vnd.fafm+yaml", "fafm media type", "fafm iana", "voice memory layer iana", "is fafm iana registered"]
     eternal: true
     registered: "2026-05-13"
-    source: "IANA"
+    source: "IANA media-type registry"
 
   - id: format_family
     type: Fact
     category: architecture
     key: faf_format_family
     value:
-      - ".faf — Foundational Context Layer (FCL) — IANA application/vnd.faf+yaml"
-      - ".fafm — Voice Memory Layer (VML) — IANA application/vnd.fafm+yaml"
+      - "One foundation, six surfaces — the .faf format family:"
+      - ".faf — Foundational Context Layer (FCL) — IANA application/vnd.faf+yaml (registered Oct 2025)"
+      - ".fafm — Voice Memory Layer (VML) — IANA application/vnd.fafm+yaml (registered May 2026)"
       - ".fafb — Binary wire format (Rust) — family extension"
-      - ".fafa — Agent Card format (draft) — family extension"
+      - ".fafa — Agent Card format — DE review at IANA (RT #1452522)"
       - ".fafg — Grid diagnostic surface (faf-grid, spec-prep) — family extension"
       - ".fafi — FAFipedia inclusion marker (filesystem only, not a mime-type)"
-    aliases: ["fafg", "faf types", "how many faf types", "faf file extensions", "list the faf file extensions", "the faf family", "faf family members"]
+    aliases: ["fafg", "faf types", "how many faf types", "faf file extensions", "list the faf file extensions", "the faf family", "faf family members", "faf family", "format family", "faf format family", "what file types does faf have"]
     eternal: true
     source: "IANA media-type registry (.faf, .fafm); FAF format-family — extensions ahead of the core .faf SPECIFICATION.md"
 

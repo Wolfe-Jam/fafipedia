@@ -139,6 +139,15 @@ entries:
     eternal: true
     source: "FAF ecosystem"
 
+  - id: grok_faf_mcp
+    type: Fact
+    category: ecosystem
+    key: grok-faf-mcp
+    value: "grok-faf-mcp — the first MCP for xAI Grok. \"Persistent Project Context for xAI Grok.\" IANA-registered .faf format, MCP server on a URL, Vercel-deployed. v1.3.1 shipped 2026-05-20 week (v1.3.0 milestone: \"hallmark online MCP — identity, measurement, doctrine\"). Five-surface distribution coherent at 1.3.1: npm (grok-faf-mcp) + MCP Registry (io.github.Wolfe-Jam/grok-faf-mcp) + GH Releases + GH Pages mirror + Vercel (grok-faf-mcp.vercel.app). FAFA integrated (cyan badge → faf-voice.vercel.app/agent)."
+    aliases: ["grok-faf-mcp", "grok mcp", "first mcp for grok", "grok mcp server", "what is grok-faf-mcp", "tell me about grok-faf-mcp", "the grok mcp", "xai grok mcp", "grok faf mcp"]
+    eternal: true
+    source: "github.com/Wolfe-Jam/grok-faf-mcp (README); npmjs.com/package/grok-faf-mcp; grok-faf-mcp.vercel.app"
+
   # === MCP & Infrastructure ===
   - id: anthropic_mcp_2759
     type: Fact

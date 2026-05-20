@@ -213,9 +213,10 @@ entries:
     type: Fact
     category: stack
     key: .fafb
-    value: "Rust implementation (binary wire format)"
+    value: "`.fafb` — FAF binary wire format. The machine-readable counterpart to YAML-readable `.faf`. Same data, machine-speed. Public surfaces: `faf-rust-sdk` v2 (crates.io) — parse / validate / score / FAFb binary in pure Rust. `faf-wasm-sdk` v2 (npm) — same engine compiled to WASM for browser / edge / Node / Bun. ZEPH (pure Zig → WASM) also validates `.fafb` natively. One spec, two language kernels, every runtime."
+    aliases: ["fafb", ".fafb", "what is fafb", "what is .fafb", "binary wire format", "faf binary", "faf-rust-sdk", "faf-wasm-sdk", "tell me about fafb", "rust faf sdk", "wasm faf sdk", "faf rust", "faf wasm"]
     eternal: true
-    source: "FAF specification"
+    source: "github.com/Wolfe-Jam/xai-faf-zeph (README, current public substrate); crates.io/crates/faf-rust-sdk; npmjs.com/package/faf-wasm-sdk"
 
   - id: zeph_runtime
     type: Fact

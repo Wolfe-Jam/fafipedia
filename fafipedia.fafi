@@ -264,9 +264,10 @@ entries:
     type: Fact
     category: philosophy
     key: what is vROM
-    value: "vROM = virtual ROM. Software-defined immutability achieved via schema + git + discipline — NOT silicon. The 'v' is engineering honesty: FAF delivers the ROM contract (read-only, boot-from-known-state) in software. To see your vROM, answer the 6Ws of your project + name your stack; that locked set IS your vROM."
+    value: "We realized: FAF is vROM. vROM (virtual ROM) is the what-it-is name; FAF is the format name — same thing, fully interchangeable. \"FAF is vROM. vROM is FAF.\" Software-defined immutability via schema + git + discipline — NOT silicon. The 'v' is engineering honesty. AI without FAF = RAM-only (re-explains every session, the drift tax). AI with FAF = vROM + RAM (boots from a known state). To see your vROM: answer the 6Ws of your project + name your stack — that locked set IS your vROM."
+    aliases: ["vrom", "vROM", "what is vrom", "what is vROM", "virtual rom", "virtual ROM", "tell me about vrom", "explain vrom", "is faf vrom", "vrom and faf", "vrom = faf", "faf is vrom", "vrom definition", "what does vrom mean"]
     eternal: true
-    source: "FAF doctrine (rom-is-vrom)"
+    source: "FAF doctrine (rom-is-vrom; vrom-is-faf-identity)"
 
   - id: faf_foundational_doctrine
     type: Fact

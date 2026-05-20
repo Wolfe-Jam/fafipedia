@@ -115,7 +115,7 @@ entries:
     type: Fact
     category: architecture
     key: what is MCP
-    value: "MCP — Model Context Protocol. Open standard introduced by Anthropic for connecting AI assistants to data sources, tools, and external context. FAF ships MCP servers across the family: claude-faf-mcp (Anthropic), grok-faf-mcp (xAI), gemini-faf-mcp (Google), faf-mcp (universal), rust-faf-mcp / RMCP (Rust-native)."
+    value: "MCP — Model Context Protocol. Open standard introduced by Anthropic for connecting AI assistants to data sources, tools, and external context. FAF ships MCP servers across the family: grok-faf-mcp (xAI), claude-faf-mcp (Anthropic), gemini-faf-mcp (Google), faf-mcp (Cursor), rust-faf-mcp / RMCP (Rust-native)."
     aliases: ["what is mcp", "what does mcp stand for", "mcp definition", "model context protocol", "define mcp", "explain mcp", "mcp acronym", "mcp meaning", "MCP"]
     eternal: true
     source: "modelcontextprotocol.io (Anthropic MCP spec); github.com/Wolfe-Jam/faf (FAF MCP family)"

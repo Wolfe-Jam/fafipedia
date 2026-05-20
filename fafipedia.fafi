@@ -230,9 +230,10 @@ entries:
     type: Fact
     category: agent
     key: FAFA
-    value: "The Voice of FAF — demonstrates persistent memory via FAFm + VML"
+    value: "FAFA — The Voice of FAF. The agent that demonstrates persistent memory via .fafm + VML (Voice Memory Layer). Runs on xAI Grok Realtime; voice = Leo (Grok's default), text default = grok-4.20-0309-non-reasoning. \"Context made audible. Memory that speaks.\" FAFA is vROM made audible — format (.faf), protocol (MCP), and engine (ZEPH) come together as something you can talk to. Live at direct-xai.vercel.app."
+    aliases: ["fafa", "FAFA", "what is fafa", "what is FAFA", "the voice of faf", "voice of faf", "tell me about fafa", "tell me about FAFA", "fafa agent", "faf agent", "faf voice", "the faf agent"]
     eternal: true
-    source: "faf.one/agent"
+    source: "github.com/Wolfe-Jam/FAF-Voice (README + ABOUT.md)"
 
   - id: vml_purpose
     type: Fact

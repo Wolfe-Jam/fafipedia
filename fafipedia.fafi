@@ -218,9 +218,12 @@ entries:
     type: Fact
     category: stack
     key: ZEPH
-    value: "Zig + WASM microsecond context engine"
+    value: "ZEPH💨 — Ultra Context Layer (UCL). Pure Zig delivery engine compiled to WebAssembly. 2.7 KB optimized binary. Three packet exports: score · validate · tier. \".faf is the substrate. ZEPH is the engine.\" \"FCL defines. UCL delivers.\" Measured on 2019 iMac (Intel i5-7360U @ 2.30 GHz): native validate 6.7 ns · tier 4.44 ns · score 12 µs on a full 21-slot .faf. The /F/ family pairing: FAF🐘 (memory) + ZEPH💨 (delivery) — together the FAF promise: \"Permanent Memory. Instant Recall.\" Name clipped from Zephyrus, Greek god of the west wind."
+    aliases: ["zeph", "ZEPH💨", "Zephyrus", "what is zeph", "what is ZEPH", "tell me about zeph", "explain zeph", "ucl", "UCL", "Ultra Context Layer", "fcl", "FCL", "Foundational Context Layer", "zig wasm engine", "xai-faf-zeph", "faf engine", "zeph runtime"]
     eternal: true
-    source: "github.com/Wolfe-Jam/xai-faf-zeph"
+    source: "github.com/Wolfe-Jam/xai-faf-zeph (README)"
+    measured: "2026-05 (canonical README)"
+    hardware: "2019 iMac · Intel i5-7360U @ 2.30 GHz"
 
   # === Agent ===
   - id: fafa_role

@@ -1,0 +1,1809 @@
+format: faf
+type: substrate-bundle
+generated: '2026-05-20'
+source: 'gen: build-substrate-bundle.mjs — READMEs are mobile doctrine, approved as published'
+docs:
+  - repo: Wolfe-Jam/faf
+    path: README.md
+    sha: 5ff4cd5c9a1c322f1506eee3d55a5973ebe0f5d2
+    intro: ''
+    sections:
+      - heading: '🏆 Historic Milestone: IANA Registration (October 31, 2025)'
+        body: |-
+          **.faf is now an officially recognized Internet standard format.**
+
+          **Official Media Type:** `application/vnd.faf+yaml`
+          **IANA Status:** Registered alongside PDF, JSON, XML, and other Internet standards
+          **Registration Date:** October 31, 2025
+      - heading: Quintuple Validation
+        body: |-
+          - ✅ **IANA** - Internet Assigned Numbers Authority (Official Internet Standard)
+          - ✅ **Anthropic** - Official MCP Registry (PR #2759 merged)
+          - ✅ **Google** - Chrome Web Store (Approved 2x: Sep 11 & Oct 29, 2025)
+          - ✅ **xAI** - Grok 4.2 recommends native FAF adoption (Feb 2026)
+          - ✅ **Community** - 27,000+ downloads, production-tested
+      - heading: IANA Media Type
+        body: |-
+          | Field | Value |
+          |-------|-------|
+          | **Media Type** | `application/vnd.faf+yaml` |
+          | **Registration** | [IANA Assignment](https://www.iana.org/assignments/media-types/application/vnd.faf+yaml) |
+          | **File Extensions** | `.faf` |
+          | **Standard Filename** | `project.faf` |
+          | **Encoding** | UTF-8 |
+          | **Base Format** | YAML 1.2 |
+
+          Same recognition as `application/pdf`, `application/json`, `application/xml`.
+
+          ---
+      - heading: 'The Visibility Revolution: `project.faf`'
+        body: |-
+          **New Standard:** `project.faf` - visible, universal, like `package.json`
+
+          <div align="center">
+          <img src="assets/Project-faf-pckg-json-README.png" alt=".faf evolved to project.faf" width="500" />
+
+          **`.faf` evolved to `project.faf`** - The evolution from hidden to visible.
+          </div>
+
+          <div align="center">
+          <img src="assets/WHITEPAPER-FIGURE-1-project-faf-file-structure.png" alt="project.faf sits between package.json and README.md" width="600" />
+
+          **`project.faf` sits right between `package.json` and `README.md`** - exactly where it belongs.
+          </div>
+
+          | File | Purpose | Who Reads It |
+          |------|---------|--------------|
+          | `package.json` | Dependencies, scripts, metadata | npm, Node.js, developers |
+          | `project.faf` | **Context, architecture, purpose** | **AI, Claude, Cursor, any AI tool** |
+          | `README.md` | Human documentation | Developers, users |
+
+          **The shift:**
+          ```bash
+      - heading: Before (hidden like secrets)
+        body: |-
+          ls -la
+          .env          # Hidden (secrets - should be hidden) ✅
+          .faf          # Hidden (AI context - should be visible!) ❌
+      - heading: After (visible like package.json)
+        body: |-
+          ls
+          package.json  # Visible (dependencies) ✅
+          project.faf   # Visible (AI context) ✅
+          README.md     # Visible (documentation) ✅
+          .env          # Still hidden (secrets stay secret) ✅
+          ```
+
+          `.env` hides secrets. `project.faf` shares context.
+
+          **Migration:** Legacy `.faf` files still work. Use `faf migrate` to rename to `project.faf`.
+
+          ---
+      - heading: What is .faf?
+        body: |-
+          **.faf** (Foundational AI-context Format) is an IANA-registered open format for AI context — **project DNA for any AI.** Transform individual files or entire projects into structured data that AI instantly understands. Your tech stack, dependencies, architecture, and goals - all in one concise, shareable format.
+
+          Instead of explaining your project every time, AI reads your .faf once and knows exactly how to help.
+
+          **27,000+ downloads** across the FAF ecosystem ([faf-cli](https://npmjs.com/package/faf-cli), [claude-faf-mcp](https://npmjs.com/package/claude-faf-mcp), [grok-faf-mcp](https://npmjs.com/package/grok-faf-mcp), and more).
+
+          ---
+      - heading: The 6 Ws — Quick Reference
+        body: |-
+          | Question | Answer |
+          |----------|--------|
+          | **WHO** is this for? | Developers using AI coding assistants (Claude, Gemini, Cursor, Grok, ChatGPT) |
+          | **WHAT** is it? | The `package.json` for AI context — IANA-registered format (`application/vnd.faf+yaml`) |
+          | **WHERE** does it work? | Everywhere AI needs context (Claude Code, Gemini CLI, Cursor, OpenAI Codex, etc.) |
+          | **WHY** do you need it? | 91% fewer tokens wasted on rediscovery. Context persists forever. Bi-syncs automatically. |
+          | **WHEN** should you use it? | New projects (day one), existing projects (now), exploring repos (`faf git <url>` — 2 seconds) |
+          | **HOW** does it work? | `npx faf-cli init` — or `npx faf-cli git <url>` for any GitHub repo, no install, no clone |
+
+          ---
+      - heading: What FAF is NOT
+        body: |-
+          - **Not a replacement for README.md** — README is for humans, `project.faf` is for AI
+          - **Not executable code** — it's structured data (YAML), not a script or config
+          - **Not a build configuration** — it describes your project, it doesn't build it
+          - **Not locked to one AI** — works with Claude, Gemini, Cursor, Grok, ChatGPT, any AI tool
+
+          ---
+      - heading: How FAF Compares
+        body: |-
+          | | FAF | AGENTS.md | .cursorrules | CLAUDE.md | GEMINI.md |
+          |---|---|---|---|---|---|
+          | **Format** | Structured YAML | Prose markdown | Prose markdown | Prose markdown | Prose markdown |
+          | **IANA Registered** | Yes | No | No | No | No |
+          | **Scored** | 0-100% | No | No | No | No |
+          | **Portable** | Any AI | OpenAI ecosystem | Cursor only | Claude only | Gemini only |
+          | **Machine-readable** | Yes (schema) | No (free text) | No (free text) | No (free text) | No (free text) |
+          | **Generates others** | Yes (all 4) | No | No | No | No |
+
+          FAF is the structured source. The others are prose outputs. `faf bi-sync --all` generates all four from one `project.faf`.
+
+          ---
+      - heading: The Problem
+        body: AI tools need context. Files have context. But there's no standard way to measure or structure that context for optimal AI understanding.
+      - heading: example.faf
+        body: |-
+          version: 1.0
+          score: 85
+          type: package
+          confidence: 0.92
+          content:
+            name: "my-project"
+            dependencies: ["react", "typescript", "vite"]
+            scripts: ["dev", "build", "test"]
+          metadata:
+            source: "package.json"
+            processed: "2024-01-26T12:00:00Z"
+            engine: "faf-v1"
+          ```
+      - heading: 🩵 [faf-cli](https://npmjs.com/package/faf-cli)
+        body: |-
+          **Command-Line Tool** - v4.5.0
+
+          - 50+ championship commands
+          - AI interop: generates AGENTS.md, .cursorrules, CLAUDE.md, GEMINI.md
+          - TURBO-CAT format discovery
+          - 14,000+ downloads
+
+          ```bash
+          npm install -g faf-cli
+          ```
+
+          </td>
+          <td width="50%">
+      - heading: 🧡 [claude-faf-mcp](https://npmjs.com/package/claude-faf-mcp)
+        body: |-
+          **Claude Desktop MCP** - v4.1.3
+
+          - 33+ tools for Claude
+          - Championship scoring
+          - <11ms performance
+          - 9,800+ downloads
+
+          ```bash
+          npm install -g claude-faf-mcp
+          ```
+
+          </td>
+          </tr>
+          </table>
+
+          **Total: 27,000+ downloads across the ecosystem** 🎉
+      - heading: MCP Ecosystem
+        body: |-
+          | Package | Platform | Registry | Downloads |
+          |---------|----------|----------|-----------|
+          | [claude-faf-mcp](https://npmjs.com/package/claude-faf-mcp) | Anthropic | npm | 9,800+ |
+          | [faf-mcp](https://npmjs.com/package/faf-mcp) | Universal | npm | 2,800+ |
+          | [grok-faf-mcp](https://npmjs.com/package/grok-faf-mcp) | xAI | npm | 850+ |
+          | [gemini-faf-mcp](https://pypi.org/project/gemini-faf-mcp/) | Google | PyPI | v1.0.2 |
+          | [MCPaaS](https://mcpaas.live) | Infrastructure | mcpaas.live | 153 souls |
+      - heading: Compiler Toolchain
+        body: |-
+          FAF compiles to multiple targets:
+
+          | Component | Language | Output |
+          |-----------|----------|--------|
+          | [xai-faf-rust](https://github.com/Wolfe-Jam/xai-faf-rust) | Rust | Native + .fafb binary |
+          | [xai-faf-zig](https://github.com/Wolfe-Jam/xai-faf-zig) | Zig→WASM | 2.7KB ghost binary |
+          | [faf-wasm-sdk](https://github.com/Wolfe-Jam/faf-wasm-sdk) | Rust→WASM | 211KB browser runtime |
+      - heading: AI Interop (v4.5.0)
+        body: |-
+          One `.faf` file generates all four AI instruction formats:
+
+          ```
+          project.faf → AGENTS.md   (OpenAI Codex)
+                      → .cursorrules (Cursor)
+                      → CLAUDE.md    (Anthropic)
+                      → GEMINI.md    (Google)
+          ```
+
+          Define once. Every AI reads it in its own language.
+      - heading: Core Principles
+        body: |-
+          1. **Universal** - 153+ file types supported
+          2. **Scored** - 0-100% context completeness score
+          3. **AI-Optimized** - Structured for maximum AI comprehension
+          4. **Human-Readable** - Simple, structured format
+          5. **Shareable** - One file contains complete context
+      - heading: Why .faf?
+        body: |-
+          - **🎯 Measure** - Know exactly how complete your AI context is
+          - **📊 Optimize** - See what's missing, improve your score
+          - **🚀 Standardize** - One format for all file types
+          - **🤖 AI-Ready** - Optimized for LLM consumption
+      - heading: File Scoring
+        body: |-
+          | Score | Meaning | AI Readiness |
+          |-------|---------|--------------|
+          | 0-60% | Incomplete | Poor context |
+          | 61-80% | Basic | Acceptable |
+          | 81-90% | Good | Recommended |
+          | 91-99% | Excellent | Optimal |
+          | 100% | Perfect | Maximum context |
+      - heading: Use Cases
+        body: |-
+          - **File Conversion:** Transform any file type into .faf format
+          - **Project Context:** Create a single .faf file for your entire project
+          - **Build Integration:** Companies can create custom implementations
+          - **AI Optimization:** Perfect context for any AI tool
+      - heading: Add to Claude Desktop config
+        body: |-
+          ```
+
+          **Universal tools. Zero configuration. Production-ready.**
+
+          → [faf-cli on npm](https://npmjs.com/package/faf-cli) (14,000+ downloads)
+          → [claude-faf-mcp on npm](https://npmjs.com/package/claude-faf-mcp) (9,800+ downloads)
+      - heading: Status
+        body: |-
+          🏆 **IANA-Registered Internet Standard** - Specification v1.1.0 (October 2025)
+          - ✅ **IANA Registration** - `application/vnd.faf+yaml` (October 31, 2025)
+          - ✅ **Anthropic Official** - MCP Registry PR #2759 merged (October 17, 2025)
+          - ✅ **Google Chrome Verified** - Web Store approved 2x (Sep 11 & Oct 29, 2025)
+          - ✅ Format specification complete
+          - ✅ Enhanced with project-level context and AI workflows
+          - ✅ Production tools available (faf-cli, claude-faf-mcp)
+          - ✅ 27,000+ combined downloads across ecosystem
+          - ✅ Battle-tested with 12,500+ test iterations (WJTTC GOLD Certified)
+          - ✅ Open source (MIT License)
+      - heading: Major Milestones
+        body: |-
+          - **Feb 25, 2026** - Grok 4.2 recommends native FAF adoption; integration spec sent to xAI
+          - **Feb 24, 2026** - faf-cli v4.5.0 "The AGENTS.md Edition" (AI interop across 4 formats)
+          - **Feb 2, 2026** - FAFb binary format v1.0 (Rust + Zig compilers shipping)
+          - **Jan 2026** - gemini-faf-mcp v1.0.2 on PyPI (Google MCP bridge)
+          - **Nov 2025** - IETF standardization in progress (`vnd` prefix removal)
+          - **Oct 31, 2025** - 🏆 **IANA Registration** (`application/vnd.faf+yaml`)
+          - **Oct 29, 2025** - Google Chrome Web Store approval (2nd)
+          - **Oct 17, 2025** - Official Anthropic MCP Registry merger (PR #2759)
+          - **Oct 12, 2025** - Specification v1.1.0 published
+          - **Sep 24, 2025** - CLI v2.1.0 published to npm
+          - **Sep 16, 2025** - MCP Server v2.0.0 published to npm
+          - **Sep 11, 2025** - Google Chrome Web Store approval (1st)
+          - **Sep 1, 2025** - Developer platform launch (fafdev.tools)
+          - **Aug 8, 2025** - Format created, first official .faf file generated
+
+          **Quintuple Validation: IANA, Anthropic, Google (2x), xAI**
+      - heading: About This Repository
+        body: |-
+          This repository contains the **format specification only**. For implementations, see **[IMPLEMENTATIONS.md](IMPLEMENTATIONS.md)**.
+
+          Most people get FAF through npm:
+          - `npm i -g faf-cli` — CLI tool (14,000+ downloads)
+          - `npm i -g claude-faf-mcp` — Claude Desktop MCP (9,800+ downloads)
+
+          The package.json in this repo provides spec metadata and versioning but contains no executable code.
+      - heading: License
+        body: |-
+          MIT - Use freely, build anything.
+
+          ---
+
+          *Created by [wolfejam.dev](https://wolfejam.dev)*
+
+          **STOP .fafFing About! 
+          Let's RACE 🏎️⚡️🏁
+  - repo: Wolfe-Jam/faf
+    path: SPECIFICATION.md
+    sha: a478ad86274f64b4e1b85eff96c533181b131148
+    intro: ''
+    sections:
+      - heading: Overview
+        body: |-
+          **.faf** (Foundational AI-context Format) is a universal format for representing project context in an AI-optimized structure.
+
+          **Standard Filename:** `project.faf` (visible standard, like package.json)
+          **Legacy Filename:** `.faf` (hidden, still supported for backward compatibility)
+      - heading: Filename Standard
+        body: |-
+          As of v1.2.0, the standard filename is **`project.faf`** (visible, next to package.json).
+
+          **Why the change?**
+          - Improved discoverability (visible in standard tools)
+          - Easier evangelism ("show, don't tell")
+          - Universal like package.json, README.md
+          - Path-based identity (no UUID needed)
+
+          **Legacy support:**
+          - `.faf` (hidden filename) still works
+          - Backward compatible with all tools
+          - Optional migration via `faf migrate` command
+
+          **File lookup priority:**
+          1. `project.faf` (standard, preferred)
+          2. `.faf` (legacy, shows deprecation warning)
+      - heading: skills (v1.1.0+)
+        body: |-
+          List of Claude Code skill names to use with this project. Skills are loaded from `~/.claude/skills/` and provide specialized expertise for specific tasks.
+
+          ```yaml
+          skills:
+            - faf                # .faf format expertise
+            - wjttc-tester       # Championship testing
+            - nextjs-builder     # Next.js development patterns
+          ```
+
+          **When to use:**
+          - Document which skills are relevant to the project
+          - Help team members know which skills to enable
+          - Track recommended skills for specific tech stacks
+
+          **Notes:**
+          - Skills must exist in `~/.claude/skills/` directory
+          - Each skill name matches its directory name
+          - Skills are loaded dynamically by Claude Code
+          - See: https://github.com/anthropics/skills for skill format
+      - heading: Scoring Algorithm
+        body: |-
+          Context score (0-100) based on:
+
+          1. **Type recognition** (20 points)
+             - File type identified correctly
+
+          2. **Content extraction** (50 points)
+             - Key information extracted
+             - Completeness of extraction
+
+          3. **Metadata quality** (20 points)
+             - Dependencies identified
+             - Relationships mapped
+             - Configuration detected
+
+          4. **AI optimization** (10 points)
+             - Structure clarity
+             - Relevance to common queries
+      - heading: Validation
+        body: |-
+          A valid .faf file must:
+          1. Be valid structured syntax
+          2. Include all required fields
+          3. Have score between 0-100
+          4. Include version number
+      - heading: Future Versions
+        body: |-
+          Future versions may add:
+          - Binary encoding options
+          - Compression support
+          - Signature/verification
+          - Extended metadata
+
+          ---
+      - heading: Version History
+        body: |-
+          **v1.2.0** (October 2025)
+          - Standard filename: `project.faf` (visible, like package.json)
+          - Legacy filename: `.faf` (hidden, still supported)
+          - Improved discoverability and evangelism
+          - Backward compatible with v1.1.0 and v1.0.0
+          - Path-based identity (no UUID needed)
+          - Shareable, fork-friendly format
+
+          **v1.1.0** (October 2025)
+          - Project-level context support (not just file-level)
+          - Architecture and pattern fields
+          - Human context (6 W's: who/what/why/where/when/how)
+          - Multiple scoring types (faf_score, ai_compatibility_score, completeness_score)
+          - Agent context for AI workflows
+          - Source data preservation
+          - Universal Intelligence Pattern support
+          - Enhanced metadata fields
+
+          **v1.0.0** (January 2025)
+          - Initial stable release
+          - Universal format specification
+          - Core type categories defined
+          - Basic scoring algorithm documented
+
+          ---
+
+          *Maintained by [wolfejam.dev](https://wolfejam.dev) | [faf.one](https://faf.one)*
+  - repo: Wolfe-Jam/faf-cli
+    path: README.md
+    sha: 18f1d6b4daf75427ccc2ef0e0e6ab12a08fea92e
+    intro: CLI for the .faf format — IANA-registered AI context that versions with your code
+    sections:
+      - heading: v6.7 — The HTML Edition
+        body: |-
+          **We rendered a `.faf`. 🔥 The day we *saw* FAF.**
+
+          A major development — not a new flag, a new way to *see* what your AI
+          works from. A `.faf` was always machine-readable. Now it is
+          human-visible.
+
+          ```
+          faf show
+          ```
+
+          **What:** one verb renders your *current* `project.faf` to a
+          self-contained `project.html` and opens it — score, tier, the 6 W's,
+          the stack, in any browser.
+
+          **Why it matters:** HTML shows **on-demand** — current truth, never a
+          stale snapshot — **visuals for human *and team* review.** The same
+          context your AI reads, now reviewable by people. Trophy renders the
+          earned award; sub-Trophy renders the honest gaps — a map, not a
+          verdict. Humans like visuals. We gave them one.
+
+          It is a **cross-check**: see what your AI sees, then improve what it is
+          working with **at the root** — the `project.faf` itself, not the
+          symptoms.
+
+          This is the **4th pillar**:
+
+          > **FAF defines. MD instructs. AI codes. HTML shows.**
+
+          `faf show` · `faf export --html` · a public render API
+          (`generateProjectHtml`) — one single-sourced renderer, no reinvention.
+
+          Receipts → [CHANGELOG](./CHANGELOG.md)
+
+          ---
+      - heading: v6.6 — The Trophy Edition
+        body: |-
+          Until now we have had 85% as a recommended minimum. **It's now 100%! 🏆 All or nothing.**
+
+          AI gets its best shot at assisting you. **Period.**
+
+          We are able to do this because we can now get you to 100% on virtually any app-type.
+
+          **FAF Init > Auto > Go = 100%.**
+
+          `faf sync` locks MD ↔ FAF with 100% 🏆 — anti-hallucination, pro-code.
+
+          (Adding `about` — the 20th app-type — made the ladder hit a score. *How no-score became a score.* Fitting, because v6.6 is when that score became the only one we recommend.)
+
+          Receipts → [CHANGELOG](./CHANGELOG.md)
+
+          ---
+      - heading: v6.0 — Built with Bun
+        body: |-
+          v6 is a ground-up rewrite. All-in on Bun — same toolchain as Claude Code.
+
+          | | Claude Code | faf-cli v6 |
+          |-|-------------|------------|
+          | **Runtime** | Bun | Bun (`bunx`) |
+          | **Test** | Bun | `bun test` |
+          | **Build** | Bun | `bun build` |
+          | **Language** | TypeScript | TypeScript |
+          | **Compile** | Bun bytecode | `bun build --compile` |
+
+          408 tests in ~13s. 296KB bundle in 2.4s. Single portable binary, 4 platforms. npx backward-compatible.
+
+          26 commands. 408 tests. WJTTC-tested. 93% smaller than v5.
+
+          ```
+          commands → interop → core → wasm
+          ```
+
+          The WASM scoring kernel (`faf-scoring-kernel` 2.0.0) does the math. Bun does the delivery.
+
+          ---
+      - heading: Commands
+        body: |-
+          | # | Command | One-liner |
+          |---|---------|-----------|
+          | 1 | `faf init` | Create `.faf` from your local project |
+          | 2 | `faf git <url>` | Instant `.faf` from any GitHub repo — no clone |
+          | 3 | `faf auto` | Zero to 100% in one command |
+          | 4 | `faf go` | Guided interview to gold code |
+          | 5 | `faf score` | Check AI-readiness (0-100%) |
+          | 6 | `faf sync` | `.faf` ↔ CLAUDE.md (bi-sync, mtime auto-direction) |
+          | 7 | `faf compile` | `.faf` → `.fafb` binary — sealed, portable, deterministic |
+          | 8 | `faf decompile` | `.fafb` → JSON |
+          | 9 | `faf export` | Generate AGENTS.md, .cursorrules, GEMINI.md |
+          | 10 | `faf check` | Validate `.faf` file |
+          | 11 | `faf edit` | Edit `.faf` fields inline |
+          | 12 | `faf convert` | Convert `.faf` to JSON |
+          | 13 | `faf drift` | Check context drift |
+          | 14 | `faf context` | Generate context output |
+          | 15 | `faf recover` | Recover `.faf` from CLAUDE.md / AGENTS.md |
+          | 16 | `faf migrate` | Migrate `.faf` to latest version |
+          | 17 | `faf search` | Search slots and formats |
+          | 18 | `faf share` | Share `.faf` via URL |
+          | 19 | `faf taf` | Generate TAF test receipt |
+          | 20 | `faf demo` | Demo walkthrough |
+          | 21 | `faf ai` | AI-powered enhance & analyze |
+          | 22 | `faf pro` | Pro features & licensing |
+          | 23 | `faf conductor` | Conductor integration |
+          | 24 | `faf formats` | Show supported formats |
+          | 25 | `faf info` | Version and system info |
+          | 26 | `faf clear` | Clear cached data |
+
+          Run `faf --help` for full options.
+
+          ---
+      - heading: Your own project
+        body: |-
+          bunx faf-cli init              # Create .faf
+          bunx faf-cli auto              # Zero to 100% in one command
+          bunx faf-cli go                # Interactive interview to gold code
+          ```
+
+          ---
+      - heading: Scoring
+        body: |-
+          **🏆 Trophy 100% — all or nothing.** From v6.6.0 onward, faf-cli recommends only Trophy. 100% on the FCL is what makes the layers above (MD instructions, Agents, AI tooling) work — sub-Trophy leaves gaps that AI guesses on. Sub-Trophy tiers are honest interim states on the way to Trophy, not endpoints.
+
+          | Tier | Score | Status |
+          |------|-------|--------|
+          | 🏆 **Trophy** | 100% | AI never has to guess |
+          | ★ **Gold** | 99%+ | 1 slot from Trophy |
+          | ◆ **Silver** | 95%+ | Close — keep going |
+          | ◇ **Bronze** | 85%+ | Interim — keep going |
+          | ● **Green** | 70%+ | Interim — keep going |
+          | ● **Yellow** | 55%+ | AI flipping coins |
+          | ○ **Red** | <55% | AI working blind |
+          | ♡ **White** | 0% | No context at all |
+
+          ---
+      - heading: Compiled Binaries
+        body: |-
+          Bun's single-file compiler produces standalone binaries — no runtime needed.
+
+          ```bash
+          bun run compile                # Current platform
+          bun run compile:all            # darwin-arm64, darwin-x64, linux-x64, windows-x64
+          ```
+
+          Ship `faf` as a single binary for CI/CD, Docker, or air-gapped environments.
+
+          ---
+      - heading: Testing
+        body: |-
+          > **Robust. Reliable. Next-level WJTTC tested.** — The Foundation Edition.
+
+          ```bash
+          bun test                       # 408 tests, 42 files, ~13s
+          ```
+
+          - **WJTTC Build Resilience** (13) — every regression class locked.
+          - **WJTTC Kernel Stress** (19) — WASM kernel boundary tests.
+          - **e2e lifecycle** — every command in sequence.
+
+          Test reports in `reports/`.
+
+          ---
+      - heading: Support
+        body: |-
+          - **[GitHub Discussions](https://github.com/Wolfe-Jam/faf-cli/discussions)** — Questions, ideas, community
+          - **Email:** team@faf.one
+
+          ---
+
+          If `faf-cli` has been useful, consider starring the repo — it helps others find it.
+
+          ---
+  - repo: Wolfe-Jam/claude-faf-mcp
+    path: README.md
+    sha: 7b22b38427b95deb2a00e61c2f186e2684eadb03
+    intro: FAF MCP server for Claude — persistent project context, 33 tools
+    sections:
+      - heading: claude-faf-mcp
+        body: |-
+          **Persistent Project Context for Claude. 30 seconds. 🐘 It never forgets.**
+
+          [![FAF](https://mcpaas.live/badge/Wolfe-Jam/claude-faf-mcp.svg)](https://builder.faf.one)
+          [![Anthropic MCP](https://img.shields.io/badge/Anthropic_MCP-merged_%232759-blueviolet)](https://github.com/modelcontextprotocol/servers/pull/2759)
+          [![CI](https://github.com/Wolfe-Jam/claude-faf-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Wolfe-Jam/claude-faf-mcp/actions/workflows/ci.yml)
+          [![npm version](https://img.shields.io/npm/v/claude-faf-mcp?color=00CCFF)](https://www.npmjs.com/package/claude-faf-mcp)
+          [![NPM Downloads](https://img.shields.io/npm/dt/claude-faf-mcp?label=downloads&color=00CCFF)](https://www.npmjs.com/package/claude-faf-mcp)
+          [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+          [![Chat to FAFA live](https://img.shields.io/badge/Chat_to_FAFA_live-00D4D4?style=flat&labelColor=000)](https://faf-voice.vercel.app/agent)
+
+          **FAF defines. MD instructs. AI codes.**
+
+          > 🐘 **tri-sync now free for all builders** — `.faf` ↔ `CLAUDE.md` ↔ `MEMORY.md` in one command. Pro feature. Now free.
+
+          > ⚡ **New: `/faf` prompt** — type `/faf` in Claude Desktop. It checks your project, scores it, drives it to 100%, and syncs. Relentlessly. One command.
+
+          33 MCP tools. IANA-registered formats (`application/vnd.faf+yaml` · `application/vnd.fafm+yaml`). 2,346 test executions per push.
+
+          ---
+      - heading: The 3Ws — 3 Answers. That's It.
+        body: |-
+          Every great product started with 3 answers to the 3Ws — **Who, What, Why:**
+
+          | | WHO is it for? | WHAT does it do? | WHY build it? |
+          |---|-----|------|-----|
+          | **Uber** | People who need a ride | Tap a button, car arrives | Taxis were broken |
+          | **Airbnb** | Travelers who can't afford hotels | Stay in someone's spare room | Millions of empty rooms exist |
+          | **Slack** | Teams drowning in email | Organized group messaging | Decisions buried in threads |
+          | **Venmo** | Friends splitting bills | Send money instantly | Someone always forgets to pay back |
+
+          Same pattern. Every product that works starts here. `.faf` captures it:
+
+          ```yaml
+          human_context:
+            who: "people who need a ride across town"
+            what: "tap a button, car arrives in minutes"
+            why: "taxis are slow, expensive, and hard to find"
+          ```
+
+          30 seconds. Claude builds your `project.faf` from this. Every session after, AI starts smart.
+      - heading: The 6Ws — For Optimized AI
+        body: |-
+          3Ws gets you started. For fully optimized AI, complete the set — **Where, When, How:**
+
+          ```yaml
+            where: "mobile app, iOS and Android"    # where does it live?
+            when: "launch in 3 months"              # when is it shipping?
+            how: "GPS matching, real-time pricing"  # how does it work?
+          ```
+
+          3Ws initiates the project with AI. 6Ws optimizes AI to 100%. Same YAML, same file. **[More examples → faf.one/ideas](https://faf.one/ideas)**
+
+          ---
+      - heading: Claude Desktop — click, copy, paste, install
+        body: |-
+          **Click** — one-click `.mcpb`
+
+          [**⬇ Download `claude-faf-mcp-5.5.2.mcpb`**](https://github.com/Wolfe-Jam/claude-faf-mcp/releases/latest/download/claude-faf-mcp-5.5.2.mcpb)
+
+          Double-click. **No terminal. No JSON config. 33 tools live in 10 seconds.**
+
+          **Copy** — paste-prompt to Claude
+
+          > Install the FAF MCP server: `npm install -g claude-faf-mcp`, then add this to my claude_desktop_config.json: `{"mcpServers": {"faf": {"command": "npx", "args": ["-y", "claude-faf-mcp"]}}}` and restart Claude Desktop.
+
+          **Paste** — `claude_desktop_config.json`
+
+          ```json
+          {
+            "mcpServers": {
+              "faf": { "command": "npx", "args": ["-y", "claude-faf-mcp"] }
+            }
+          }
+          ```
+
+          **Install** — manual npm
+
+          ```bash
+          npm install -g claude-faf-mcp
+          ```
+
+          Restart Claude Desktop.
+      - heading: Then
+        body: |-
+          Type `/faf` — Claude checks your project, scores it, drives it to 100%, and syncs. Done.
+
+          Or tell Claude your 3Ws: *"I'm building [what] for [who] because [why]"*
+
+          ---
+      - heading: How It Works
+        body: |-
+          ```
+          You → 3 answers → project.faf → AI reads it → every session → forever
+
+          project.faf  ←── 8ms ──→  CLAUDE.md     (bi-sync, free)
+          project.faf  ←── 8ms ──→  MEMORY.md     (tri-sync, Pro 🐘)
+          ```
+
+          Claude does the rest. Zero-effort, right first time, fast, accurate, done. Language, framework, package manager, build tools — all auto-detected from your existing files. The human context is the part only you can give.
+
+          ---
+      - heading: 'Scoring: From Blind to Optimized'
+        body: |-
+          | Tier | Score | What it means |
+          |------|-------|---------------|
+          | 🏆 **TROPHY** | 100% | Gold Code — AI is optimized |
+          | ★ **GOLD** | 99%+ | Near-perfect context |
+          | ◆ **SILVER** | 95%+ | Excellent |
+          | ◇ **BRONZE** | 85%+ | Production ready |
+          | ● **GREEN** | 70%+ | Solid foundation |
+          | ● **YELLOW** | 55%+ | AI flipping coins |
+          | ○ **RED** | <55% | AI working blind |
+          | ♡ **WHITE** | 0% | No context at all |
+
+          At 55%, AI guesses half the time. At 100%, AI knows your project. Same compiler as faf-cli — same score everywhere.
+
+          ---
+      - heading: 33 MCP Tools
+        body: |-
+          All tools run standalone — zero CLI dependencies, 19ms average execution.
+
+          **Create & Detect**
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_init` | Initialize project DNA |
+          | `faf_auto` | Auto-detect stack and populate context |
+          | `faf_quick` | Lightning-fast creation (3ms) |
+          | `faf_readme` | Extract context from README (+25-35% boost) |
+          | `faf_formats` | Discover all formats in your project |
+          | `faf_git` | Extract context from any GitHub repo URL |
+          | `faf_human_add` | Add human context (the 6Ws) |
+
+          **Validate & Score**
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_score` | AI-readiness score (0-100%) with breakdown |
+          | `faf_check` | Validate .faf structure |
+          | `faf_doctor` | Diagnose and fix common issues |
+          | `faf_go` | Guided interview to Gold Code |
+
+          **Sync & Persist**
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_sync` | Sync .faf → CLAUDE.md |
+          | `faf_bi_sync` | Bi-directional .faf ↔ CLAUDE.md |
+          | `faf_tri_sync` | Tri-sync .faf ↔ CLAUDE.md ↔ MEMORY.md — Pro feature, free for developers 🐘 |
+          | `faf_enhance` | Intelligent enhancement |
+
+          **Export & Interop**
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_agents` | Import/export AGENTS.md (OpenAI Codex) |
+          | `faf_cursor` | Import/export .cursorrules (Cursor IDE) |
+          | `faf_gemini` | Import/export GEMINI.md (Google Gemini) |
+          | `faf_conductor` | Import/export Conductor directory |
+
+          **Read & Write**
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_read` | Read any file |
+          | `faf_write` | Write any file |
+          | `faf_status` | Project status overview |
+          | `faf_debug` | Environment inspection |
+          | `faf_about` | What is .faf? |
+
+          **[Full tool reference →](https://github.com/Wolfe-Jam/claude-faf-mcp/blob/main/docs/mcp-tools.md)**
+
+          ---
+      - heading: 🐘 Nelly Never Forgets
+        body: |-
+          bi-sync keeps `.faf` ↔ `CLAUDE.md` aligned.
+
+          tri-sync adds MEMORY.md — your AI remembers your project across every session.
+
+          ```
+          bi-sync  = .faf ↔ CLAUDE.md              ← always in sync
+          tri-sync = .faf ↔ CLAUDE.md ↔ MEMORY.md  ← Nelly never forgets 🐘
+          ```
+
+          Pro feature, free for developers. Teams & Enterprise: **[faf.one/pro](https://faf.one/pro)** (plans)
+
+          ---
+      - heading: The .FAF Position
+        body: |-
+          ```
+          Model        Context          Protocol
+          ─────        ───────          ────────
+          Claude    →   .faf        →    MCP
+          Gemini    →   .faf        →    MCP
+          Codex     →   .faf        →    MCP
+          Any LLM   →   .faf        →    MCP
+          ```
+
+          IANA-registered (`application/vnd.faf+yaml`). Works with any AI. Define once, use everywhere.
+
+          ---
+      - heading: Ecosystem
+        body: |-
+          | Package | Platform | Registry |
+          |---------|----------|----------|
+          | **[claude-faf-mcp](https://www.npmjs.com/package/claude-faf-mcp)** (this) | Claude | npm |
+          | **[faf-cli](https://www.npmjs.com/package/faf-cli)** | Universal CLI | npm + Homebrew |
+          | **[gemini-faf-mcp](https://pypi.org/project/gemini-faf-mcp/)** | Google Gemini | PyPI |
+          | **[grok-faf-mcp](https://www.npmjs.com/package/grok-faf-mcp)** | xAI Grok | npm |
+          | **[rust-faf-mcp](https://crates.io/crates/rust-faf-mcp)** | Rust | crates.io |
+          | **[faf-wasm](https://www.npmjs.com/package/faf-wasm)** | Browser/Edge | npm |
+          | **[Chrome Extension](https://chromewebstore.google.com/detail/lnecebepmpjpilldfmndnaofbfjkjlkm)** | Browser | Chrome Web Store |
+
+          Same `project.faf`. Same scoring. Same result. Different execution layer.
+
+          ---
+      - heading: Quality
+        body: |-
+          391 tests · 12 suites · 6 platforms (ubuntu/macos/windows × Node 18/20)
+
+          **[CI Dashboard →](https://github.com/Wolfe-Jam/claude-faf-mcp/actions/workflows/ci.yml)**
+
+          ---
+      - heading: Privacy
+        body: |-
+          Everything runs locally. No data leaves your machine. No analytics, no telemetry, no tracking, no accounts. **[Privacy policy →](./PRIVACY.md)**
+
+          ---
+
+          If `claude-faf-mcp` has been useful, consider starring the repo — it helps others find it.
+
+          ---
+      - heading: FAF Family
+        body: |-
+          | | |
+          |---|---|
+          | **[faf-cli](https://www.npmjs.com/package/faf-cli)** | `npx faf-cli init` — create .faf for any project |
+          | **[claude-faf-mcp](https://www.npmjs.com/package/claude-faf-mcp)** | MCP server for Claude Desktop |
+          | **[gemini-faf-mcp](https://pypi.org/project/gemini-faf-mcp/)** | MCP server for Gemini CLI |
+          | **[grok-faf-mcp](https://www.npmjs.com/package/grok-faf-mcp)** | MCP server for Grok |
+          | **[faf-mcp](https://www.npmjs.com/package/faf-mcp)** | MCP server for Cursor, Windsurf, Cline, VS Code |
+          | **[rust-faf-mcp](https://crates.io/crates/rust-faf-mcp)** | MCP server in Rust |
+          | **[faf-skills](https://github.com/Wolfe-Jam/faf-skills)** | 17 Claude Code skills |
+          | **[faf.one](https://faf.one)** | Blog, downloads, docs |
+          | **[IANA: vnd.faf+yaml](https://www.iana.org/assignments/media-types/application/vnd.faf+yaml)** | Context format (2025-10-30) |
+          | **[IANA: vnd.fafm+yaml](https://www.iana.org/assignments/media-types/application/vnd.fafm+yaml)** | Memory format (2026-05-13) |
+
+          *format | driven 🏎️⚡️ [wolfejam.dev](https://wolfejam.dev)*
+
+          ---
+      - heading: Get the CLI
+        body: |-
+          > **faf-cli** — The original AI-Context CLI. A must-have for every builder.
+
+          ```bash
+          npx faf-cli auto
+          ```
+
+          **Anthropic MCP [#2759](https://github.com/modelcontextprotocol/servers/pull/2759)** · **2 IANA registrations:** `vnd.faf+yaml` (Context) · `vnd.fafm+yaml` (Memory) · [faf.one](https://faf.one) · [npm](https://www.npmjs.com/package/faf-cli)
+  - repo: Wolfe-Jam/grok-faf-mcp
+    path: README.md
+    sha: 76f825e3954f0d76c3d73f931a4e27e714d893d7
+    intro: First MCP server for Grok — URL-based AI context, FAST⚡️AF
+    sections:
+      - heading: FAST⚡️AF Context
+        body: |-
+          <div align="center">
+            <img src="https://www.faf.one/orange-smiley.svg" alt="FAF" width="80" />
+
+            <h3>Grok asked for MCP on a URL. This is it.</h3>
+
+            <p><strong>Persistent Project Context for xAI Grok.</strong></p>
+            <p><code>URL-based • Zero config • Just works</code></p>
+
+            [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Wolfe-Jam/grok-faf-mcp)
+
+            [![FAF](https://mcpaas.live/badge/Wolfe-Jam/grok-faf-mcp.svg)](https://builder.faf.one)
+            [![CI](https://github.com/Wolfe-Jam/grok-faf-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Wolfe-Jam/grok-faf-mcp/actions/workflows/ci.yml)
+            [![NPM Downloads](https://img.shields.io/npm/dt/grok-faf-mcp?label=downloads&color=00CCFF)](https://www.npmjs.com/package/grok-faf-mcp)
+            [![npm version](https://img.shields.io/npm/v/grok-faf-mcp?color=00CCFF)](https://www.npmjs.com/package/grok-faf-mcp)
+            [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+            [![Vercel](https://img.shields.io/badge/Vercel-Live-black?logo=vercel)](https://grok-faf-mcp.vercel.app)
+            [![project.faf](https://img.shields.io/badge/project.faf-inside-00D4D4)](https://github.com/Wolfe-Jam/faf)
+            [![Chat to FAFA live](https://img.shields.io/badge/Chat_to_FAFA_live-00D4D4?style=flat&labelColor=000)](https://faf-voice.vercel.app/agent)
+          </div>
+
+          **FAF defines. MD instructs. AI codes.**
+
+          ---
+      - heading: The 6 Ws - Quick Reference
+        body: |-
+          Every README should answer these questions. Here's ours:
+
+          | Question | Answer |
+          |----------|--------|
+          | **WHO** is this for? | Grok/xAI developers and teams building with URL-based MCP |
+          | **WHAT** is it? | Persistent project context for xAI Grok — URL-first deployment, IANA-registered .faf format |
+          | **WHERE** does it work? | Vercel (production) • Local dev • Any MCP client supporting HTTP-SSE |
+          | **WHY** do you need it? | Zero-config MCP on a URL - Grok asked for it, we built it first |
+          | **WHEN** should you use it? | Grok integration testing, xAI projects, URL-based MCP deployments |
+          | **HOW** does it work? | Point to `https://grok-faf-mcp.vercel.app/sse` — context tools served via MCP SSE |
+
+          **For AI:** Read the detailed sections below for full context.
+          **For humans:** Use this pattern in YOUR README. Answer these 6 questions clearly.
+
+          ---
+      - heading: The Problem
+        body: |-
+          Every Grok session starts from zero. You re-explain your stack, your goals, your architecture. Every time.
+
+          `.faf` fixes that. One file, your project DNA, persistent across every session.
+
+          ```
+          Without .faf  →  "I'm building a REST API in Rust with Axum and PostgreSQL..."
+          With .faf     →  Grok already knows. Every session. Forever.
+          ```
+
+          ---
+      - heading: project.faf — your project, machine-readable
+        body: |-
+          faf_version: "3.3"
+          project:
+            name: my-api
+            goal: REST API for user management
+            main_language: TypeScript
+          stack:
+            backend: Express
+            database: PostgreSQL
+            testing: Jest
+            runtime: Node.js
+          human_context:
+            who: Backend developers
+            what: User CRUD with auth
+            why: Replace legacy PHP service
+          ```
+
+          Every AI agent reads this once and knows exactly what you're building.
+
+          ---
+      - heading: 'Scoring: From Blind to Optimized'
+        body: |-
+          | Tier | Score | What it means |
+          |------|-------|---------------|
+          | **🏆 TROPHY** | 100% | Gold Code — AI is optimized |
+          | **★ GOLD** | 99%+ | Near-perfect context |
+          | **◆ SILVER** | 95%+ | Excellent |
+          | **◇ BRONZE** | 85%+ | Strong baseline |
+          | **●** GREEN | 70%+ | Solid foundation |
+          | ● YELLOW | 55%+ | AI flipping coins |
+          | ○ RED | <55% | AI working blind |
+          | ♡ WHITE | 0% | Start — good luck |
+
+          At 55%, Grok guesses half the time. At 100%, Grok knows your project.
+
+          ---
+      - heading: 2. Self-Deploy (Your Own Vercel)
+        body: Click the **Deploy with Vercel** button above. Zero config — get your own instance in 30 seconds.
+      - heading: MCP Tools (21 Core)
+        body: |-
+          **Create & Detect**
+
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_init` | Create project.faf from your project |
+          | `faf_auto` | Auto-detect stack and populate context |
+          | `faf_score` | AI-readiness score (0-100%) with breakdown |
+          | `faf_status` | Check current AI-readability |
+          | `faf_enhance` | Intelligent enhancement |
+
+          **Sync & Persist**
+
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_sync` | Sync .faf → CLAUDE.md |
+          | `faf_bi_sync` | Bi-directional .faf ↔ platform context |
+          | `faf_trust` | Validate .faf integrity |
+
+          **Read & Write**
+
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_read` | Read any file |
+          | `faf_write` | Write any file |
+          | `faf_list` | Discover projects with .faf files |
+
+          **RAG & Grok-Exclusive**
+
+          | Tool | Purpose |
+          |------|---------|
+          | `rag_query` | RAG-powered context retrieval |
+          | `rag_cache_stats` | RAG cache statistics |
+          | `rag_cache_clear` | Clear RAG cache |
+          | `grok_go_fast_af` | Auto-load .faf context for Grok |
+
+          Plus 34 advanced tools available with `FAF_SHOW_ADVANCED=true`.
+
+          ---
+      - heading: Architecture
+        body: |-
+          ```
+          grok-faf-mcp v1.3.1
+          ├── api/index.ts              → Vercel serverless (Express + SSE transport)
+          ├── src/
+          │   ├── server.ts             → MCP server (GrokFafMcpServer)
+          │   ├── handlers/
+          │   │   ├── championship-tools.ts  → 55 tool definitions
+          │   │   ├── tool-registry.ts       → Visibility filtering (core/advanced)
+          │   │   └── engine-adapter.ts      → FAF engine bridge
+          │   └── faf-core/
+          │       └── compiler/
+          │           └── faf-compiler.ts    → Mk4 WASM scoring + Mk3.1 fallback
+          ├── smithery.yaml             → Smithery listing config
+          └── vercel.json               → Vercel routing
+          ```
+
+          **Scoring pipeline:** TypeScript compiler parses `.faf` → detects project type → The Bouncer injects `slotignored` for inapplicable slots → `faf-scoring-kernel` (WASM) scores → falls back to Mk3.1 if kernel unavailable.
+
+          ---
+      - heading: Testing
+        body: |-
+          179 tests across 7 suites:
+
+          ```bash
+          npm test    # runs all 179
+          ```
+
+          | Suite | Tests | Coverage |
+          |-------|-------|----------|
+          | Desktop-native validation | 10 | Core native functions, security, performance |
+          | MCP protocol | 28 | Tool registration, transport, error handling |
+          | Compiler scoring | 22 | Mk4 engine, type detection, slot counting |
+          | RAG system | 19 | Query, caching, context retrieval |
+          | Engine adapter | 35 | CLI detection, fallback behavior |
+          | Integration | 40 | End-to-end tool execution |
+          | WJTTC certification | 25 | Championship-grade compliance |
+
+          ---
+      - heading: Endpoints
+        body: |-
+          | Endpoint | URL |
+          |----------|-----|
+          | Root | `https://grok-faf-mcp.vercel.app/` |
+          | SSE | `https://grok-faf-mcp.vercel.app/sse` |
+          | Health | `https://grok-faf-mcp.vercel.app/health` |
+          | Info | `https://grok-faf-mcp.vercel.app/info` |
+
+          ---
+      - heading: Ecosystem
+        body: |-
+          One format, every AI platform.
+
+          | Package | Platform | Registry |
+          |---------|----------|----------|
+          | **grok-faf-mcp** (this) | **xAI Grok** | **npm** |
+          | [claude-faf-mcp](https://npmjs.com/package/claude-faf-mcp) | Anthropic | npm + MCP #2759 |
+          | [gemini-faf-mcp](https://pypi.org/project/gemini-faf-mcp/) | Google | PyPI |
+          | [rust-faf-mcp](https://crates.io/crates/rust-faf-mcp) | Rust | crates.io |
+          | [faf-mcp](https://npmjs.com/package/faf-mcp) | Cursor, IDE's, VS Code | npm |
+          | [faf-cli](https://npmjs.com/package/faf-cli) | Terminal CLI | bunx, npm + Homebrew |
+
+          Same `project.faf`. Same scoring. Same result. Different execution layer.
+
+          ---
+      - heading: Voice variant — `grok-faf-voice` (VML)
+        body: |-
+          `.fafm 🐘🎙️` — the voice variant of the `.faf 🐘` family.
+
+          **[grok-faf-voice](https://pypi.org/project/grok-faf-voice/)** is the reference implementation of the **Voice Memory Layer (VML)** — what your voice agent *remembers* across sessions, devices, and model switches. Companion to `grok-faf-mcp`:
+
+          - **`grok-faf-mcp`** (this) — `.faf` Foundational Context Layer for Grok via MCP-on-a-URL.
+          - **`grok-faf-voice`** — `.fafm` Voice Memory Layer (VML) for Grok Voice via LiveKit + xAI realtime.
+
+          Same family. Different surface. *Voice swappable; memory permanent.*
+
+          [PyPI](https://pypi.org/project/grok-faf-voice/) · [GitHub](https://github.com/Wolfe-Jam/grok-faf-voice) · [Onboarding](https://wolfe-jam.github.io/grok-faf-voice/onboarding.html)
+
+          ---
+      - heading: Contributing
+        body: |-
+          PR conventions, code style, CI doctrine, MCP-tool contribution path,
+          npm publish discipline, architecture decisions: **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+
+          xAI / Grok devs welcome — TL;DR setup at the top, F1-inspired tone throughout.
+
+          ---
+
+          If grok-faf-mcp has been useful, consider starring the repo ⭐️ it helps others find it.
+
+          ---
+      - heading: License
+        body: |-
+          MIT — Free and open source
+
+          ---
+
+          <div align="center">
+            <p><strong>Built for Grok. Built for Speed. Built Right.</strong></p>
+            <p>FAST⚡️AF • First to Ship • Zero Friction</p>
+            <p><strong>Zero drift. Eternal sync. AI optimized.</strong> 🏆</p>
+          </div>
+
+          ---
+      - heading: Get the CLI
+        body: |-
+          > **faf-cli** — The original AI-Context CLI. A must-have for every builder.
+
+          ```bash
+          npx faf-cli auto
+          ```
+
+          **Anthropic MCP [#2759](https://github.com/modelcontextprotocol/servers/pull/2759)** · **IANA Registered:** `application/vnd.faf+yaml` · [faf.one](https://faf.one) · [npm](https://www.npmjs.com/package/faf-cli)
+  - repo: Wolfe-Jam/gemini-faf-mcp
+    path: README.md
+    sha: 54983a59e4a457b04156235274be430a6c02d5a7
+    intro: FAF MCP server for Google Gemini — persistent project context via PyPI
+    sections:
+      - heading: gemini-faf-mcp
+        body: |-
+          **Persistent Project Context for Google Gemini. Define once. Sync everywhere.**
+
+          **FAF defines. MD instructs. AI codes.**
+
+          Stop re-explaining your project to every new Gemini session. Every Gemini conversation starts cold — you re-state your stack, your goals, your conventions every single time. `.faf` is one structured file that captures all of it. This package is the MCP server that lets Gemini read it.
+
+          <!-- mcp-name: io.github.Wolfe-Jam/gemini-faf-mcp -->
+
+          [![FAF](https://mcpaas.live/badge/Wolfe-Jam/gemini-faf-mcp.svg)](https://builder.faf.one)
+          [![PyPI](https://img.shields.io/pypi/v/gemini-faf-mcp?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/gemini-faf-mcp/)
+          [![Downloads](https://img.shields.io/pypi/dm/gemini-faf-mcp?style=for-the-badge&color=blue)](https://pypi.org/project/gemini-faf-mcp/)
+          [![Tests](https://img.shields.io/badge/Tests-221%20passing-brightgreen?style=for-the-badge)](https://github.com/Wolfe-Jam/gemini-faf-mcp)
+          [![IANA](https://img.shields.io/badge/IANA-registered-informational?style=for-the-badge)](https://www.iana.org/assignments/media-types/application/vnd.faf+yaml)
+      - heading: Before and after
+        body: |-
+          ```
+          Without FAF                           With FAF (.faf at 85%+ Bronze)
+          ─────────────────────────             ─────────────────────────
+          You: "I'm using FastAPI with...       You: "Add a /users/me endpoint"
+                PostgreSQL, pytest, and..."     Gemini: [generates correct code,
+          Gemini: "Got it. What's the              uses your auth pattern,
+                  codebase like?"                  matches your test style]
+          You: "It's a REST API for..."
+          [5 minutes of re-explaining]
+          Gemini: [now ready to help]
+          ```
+
+          `.faf` is read once at session start. Every tool call lands on a Gemini that already knows your project.
+      - heading: What's New in v2.2.0
+        body: |-
+          **Mk4 Championship Scoring Engine** — all 12 tools now use the same scoring algorithm as the Rust compiler and TypeScript CLI. `faf_score` and `faf_validate` return slot-level detail (`populated`, `active`, `total`). Scores match across every FAF tool in every language. 221 tests, 41 new WJTTC championship tests. Dead code removed (`sync_faf.py`).
+
+          > **v2.2.1** is a patch release — package description aligned with the canonical "Persistent project context for Google Gemini" wording across PyPI, the Gemini Extensions Gallery, and the MCP Registry. No code changes.
+
+          ---
+      - heading: 3. Generate your project context
+        body: |-
+          In your Gemini CLI:
+
+          ```
+          > /gemini-faf-mcp:setup
+          ```
+
+          You should see: `Created project.faf — Score: 85% (BRONZE)`. From this point, every Gemini session in this project reads it automatically.
+
+          > **Tip:** A score of 85% (BRONZE) is the minimum where Gemini stops guessing. Run `/gemini-faf-mcp:score` to see what's missing and how to push to 100% (TROPHY).
+
+          ---
+      - heading: The "One-File" Advantage
+        body: |-
+          A `.faf` file is structured YAML that captures your project DNA. Every AI agent reads it once and knows exactly what you're building.
+
+          ```yaml
+      - heading: project.faf — your project, machine-readable
+        body: |-
+          faf_version: '2.5.0'
+          project:
+            name: my-api
+            goal: REST API for user management
+            main_language: Python
+          stack:
+            backend: FastAPI
+            database: PostgreSQL
+            testing: pytest
+          human_context:
+            who: Backend developers
+            what: User CRUD with auth
+            why: Replace legacy PHP service
+          ```
+
+          **Result:** Gemini reads this once and knows your project. No 20-minute onboarding. No wrong assumptions. Every session starts aligned.
+
+          > **FAF defines. MD instructs. AI codes.**
+      - heading: What about my `GEMINI.md`?
+        body: |-
+          You don't replace it. `.faf` **generates** it. Run `faf_gemini` and you get a fresh `GEMINI.md` with the structured project data baked in as YAML frontmatter — the same `GEMINI.md` Gemini CLI already reads, but generated from a single source of truth instead of hand-maintained.
+
+          ```bash
+          > /gemini-faf-mcp:export
+      - heading: Generates GEMINI.md from project.faf
+        body: |-
+          ```
+
+          `.faf` is the source. `GEMINI.md` is one of its outputs. Same logic for `AGENTS.md` (OpenAI Codex), `.cursorrules`, `CLAUDE.md`, and others — write once, render everywhere.
+
+          ---
+      - heading: Auto-Detect Your Stack
+        body: |-
+          `faf_auto` scans your project's manifest files and generates a `.faf` with accurate slot values. No manual entry needed.
+
+          ```
+          > Auto-detect my project stack
+          ```
+
+          ```json
+          {
+            "detected": {
+              "main_language": "Python",
+              "package_manager": "pip",
+              "build_tool": "setuptools",
+              "framework": "FastMCP",
+              "api_type": "MCP",
+              "database": "BigQuery"
+            },
+            "score": 100,
+            "tier": "TROPHY"
+          }
+          ```
+
+          **What it scans:**
+
+          | File | Detects |
+          |------|---------|
+          | `pyproject.toml` | Python + build system + frameworks (FastAPI, Django, Flask, FastMCP) + databases |
+          | `package.json` | JavaScript/TypeScript + frameworks (React, Vue, Next.js, Express) |
+          | `Cargo.toml` | Rust + cargo + frameworks (Axum, Actix) |
+          | `go.mod` | Go + go modules + frameworks (Gin, Echo) |
+          | `requirements.txt` | Python (fallback) |
+          | `Gemfile` | Ruby |
+          | `composer.json` | PHP |
+
+          **Priority rule:** `pyproject.toml` / `Cargo.toml` / `go.mod` take priority over `package.json`. Only sets values that are actually detected — no hardcoded defaults.
+
+          ---
+      - heading: Create & Detect
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_init` | Create a starter `.faf` file with project name, goal, and language |
+          | `faf_auto` | Auto-detect stack from manifest files and generate/update `.faf` |
+          | `faf_discover` | Find `.faf` files in the project tree |
+      - heading: Validate & Score
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_validate` | Full Mk4 validation — score, tier, slot counts, errors, warnings |
+          | `faf_score` | Quick Mk4 score — score, tier, populated/active/total slot counts |
+      - heading: Read & Transform
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_read` | Parse a `.faf` file into structured data |
+          | `faf_stringify` | Convert parsed FAF data back to clean YAML |
+          | `faf_context` | Get Gemini-optimized context (project + stack + score) |
+      - heading: Export & Interop
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_gemini` | Export `GEMINI.md` with YAML frontmatter for Gemini CLI |
+          | `faf_agents` | Export `AGENTS.md` for OpenAI Codex, Cursor, and other AI tools |
+      - heading: Reference
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_about` | FAF format info — IANA registration, version, ecosystem |
+          | `faf_model` | Get a 100% Trophy-scored example `.faf` for any of 15 project types |
+
+          ---
+      - heading: Score and Tier System
+        body: |-
+          Your `.faf` file is scored on completeness — how many slots are filled with real values.
+
+          | Score | Tier | Meaning |
+          |-------|------|---------|
+          | 100% | TROPHY | AI has full context for your project |
+          | 99% | GOLD | Exceptional |
+          | 95% | SILVER | Top tier |
+          | 85% | BRONZE | Minimum recommended — AI can build from here |
+          | 70% | GREEN | Solid foundation |
+          | 55% | YELLOW | Needs improvement |
+          | <55% | RED | Major gaps — AI will guess |
+          | 0% | WHITE | Empty |
+
+          **Aim for Bronze (85%+).** That's where AI stops guessing and starts knowing.
+
+          ---
+      - heading: Architecture
+        body: |-
+          ```
+          gemini-faf-mcp v2.2.1
+          ├── server.py              → FastMCP MCP server (12 tools, Mk4 scoring)
+          ├── main.py                → Cloud Run REST API (GET/POST/PUT)
+          ├── models.py              → 15 project type examples
+          └── src/gemini_faf_mcp/    → Python SDK (FAFClient, parser)
+          ```
+
+          The MCP server delegates to `faf-python-sdk` for parsing, validation, and Mk4 scoring. Stack detection in `faf_auto` is Python-native — no external CLI dependencies.
+
+          ---
+      - heading: Testing
+        body: |-
+          ```bash
+          pip install -e ".[dev]"
+          python -m pytest tests/ -v
+          ```
+
+          221 tests passing across 9 WJTTC tiers (125 MCP server + 55 Cloud Function + 41 Mk4 WJTTC championship). Championship-grade test coverage — [WJTTC certified](https://github.com/Wolfe-Jam/WJTTC).
+
+          ---
+      - heading: FAF Ecosystem
+        body: |-
+          One format, every AI platform.
+
+          | Package | Platform | Registry |
+          |---------|----------|----------|
+          | [claude-faf-mcp](https://npmjs.com/package/claude-faf-mcp) | Anthropic | npm + MCP #2759 |
+          | **gemini-faf-mcp** | **Google** | **PyPI** |
+          | [grok-faf-mcp](https://npmjs.com/package/grok-faf-mcp) | xAI | npm |
+          | [rust-faf-mcp](https://crates.io/crates/rust-faf-mcp) | Rust | crates.io |
+          | [faf-cli](https://npmjs.com/package/faf-cli) | Universal | npm |
+
+          ---
+      - heading: Python SDK
+        body: |-
+          Use FAF directly in Python without MCP:
+
+          ```python
+          from gemini_faf_mcp import FAFClient, parse_faf, validate_faf, find_faf_file
+      - heading: Parse and validate locally
+        body: |-
+          data = parse_faf("project.faf")
+          result = validate_faf(data)
+          print(f"Score: {result['score']}%, Tier: {result['tier']}")
+      - heading: Cloud Run REST API
+        body: |-
+          Live endpoint for badges, multi-agent context brokering, and voice-to-FAF mutations.
+
+          ```
+          https://faf-source-of-truth-631316210911.us-east1.run.app
+          ```
+
+          Supports agent-optimized responses (Gemini, Claude, Grok, Jules, Codex/Copilot/Cursor) via `X-FAF-Agent` header. Voice mutations via Gemini Live through PUT endpoint. Auto-deploys via Cloud Build on push to `main`.
+
+          ---
+
+          If `gemini-faf-mcp` has been useful, consider starring the repo — it helps others find it.
+
+          ---
+      - heading: Get the CLI
+        body: |-
+          > **faf-cli** — The original AI-Context CLI. A must-have for every builder.
+
+          ```bash
+          npx faf-cli auto
+          ```
+
+          **Anthropic MCP [#2759](https://github.com/modelcontextprotocol/servers/pull/2759)** · **IANA Registered:** `application/vnd.faf+yaml` · [faf.one](https://faf.one) · [npm](https://www.npmjs.com/package/faf-cli)
+  - repo: Wolfe-Jam/faf-mcp
+    path: README.md
+    sha: ed53b2a2a297e609e9331fb461f1f17169ef939a
+    intro: FAF MCP IDE Edition — persistent project context for Cursor, Windsurf, Cline, VS Code
+    sections:
+      - heading: Define once. Sync everywhere.
+        body: |-
+          You maintain `.cursorrules`. Your teammate uses `AGENTS.md`. Someone on the team just switched to Gemini. Every AI tool wants its own context file — and they all say the same thing in different formats.
+
+          **faf-mcp is the dedicated MCP server for Cursor, Windsurf, Cline, VS Code, and every non-Claude platform.** One `.faf` file in your repo, synced to every format your team needs.
+
+          ```
+                                project.faf
+                                     │
+                    ┌────────┬───────┴───────┬────────────┐
+                    ▼        ▼               ▼            ▼
+                CLAUDE.md  AGENTS.md  .cursorrules  GEMINI.md
+                (Claude)   (Codex)      (Cursor)    (Gemini)
+          ```
+      - heading: Quick Start
+        body: |-
+          ```bash
+          npx faf-mcp
+          ```
+
+          Add to your MCP config:
+
+          ```json
+          {"mcpServers": {"faf": {"command": "npx", "args": ["-y", "faf-mcp"]}}}
+          ```
+
+          | Platform | Config File |
+          |----------|-------------|
+          | **Cursor** | `~/.cursor/mcp.json` |
+          | **Windsurf** | `~/.codeium/windsurf/mcp_config.json` |
+          | **Cline** | Cline MCP settings |
+          | **VS Code** | MCP extension config |
+          | **Claude Desktop** | Use [claude-faf-mcp](https://github.com/Wolfe-Jam/claude-faf-mcp) |
+
+          ---
+      - heading: Three Ways to Deploy
+        body: |-
+          | Door | Method | Best For |
+          |------|--------|----------|
+          | **Hosted** | [mcpaas.live](https://mcpaas.live) | Zero-install, point any MCP client to the URL |
+          | **Self-Deploy** | [Deploy to Vercel](https://vercel.com/new?repository-url=https://github.com/Wolfe-Jam/faf-mcp) | Your own instance, full control |
+          | **Local** | `npx faf-mcp` | IDE integration via stdio transport |
+      - heading: Hosted (mcpaas.live)
+        body: Point your MCP client to `https://mcpaas.live/sse` — no install, no config, no maintenance. Served from 300+ Cloudflare edges with sub-ms cold starts via 2.7KB Zig-WASM engine.
+      - heading: Self-Deploy (Vercel)
+        body: |-
+          Deploy your own MCP server on Vercel in one click. Once deployed, your server exposes:
+          - `/health` — Health check
+          - `/info` — Server metadata + tool list
+          - `/sse` — MCP Server-Sent Events transport
+      - heading: Interop Tools
+        body: |-
+          | Tool | Platform | Action |
+          |------|----------|--------|
+          | `faf_agents` | OpenAI Codex | Import/export/sync AGENTS.md |
+          | `faf_cursor` | Cursor IDE | Import/export/sync .cursorrules |
+          | `faf_gemini` | Google Gemini | Import/export/sync GEMINI.md |
+          | `faf_conductor` | Conductor | Import/export directory structure |
+          | `faf_git` | GitHub | Generate .faf from any repo URL |
+
+          ```bash
+      - heading: Generate .faf from any GitHub repo
+        body: |-
+          faf_git { url: "https://github.com/facebook/react" }
+          ```
+
+          **25 MCP tools** (with CLI fallback) · **309 tests** (9 suites) · **7 bundled parsers**
+
+          ---
+      - heading: Cloud Sync
+        body: |-
+          Share your FAF context globally via [mcpaas.live](https://mcpaas.live):
+
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_cloud_publish` | Upload to cloud, get shareable URL |
+          | `faf_cloud_fetch` | Pull context from cloud |
+          | `faf_cloud_list` | List available souls |
+          | `faf_cloud_search` | Search across souls |
+          | `faf_cloud_share` | Generate share links |
+
+          **Example Workflow:**
+          ```bash
+      - heading: Anyone can fetch it
+        body: |-
+          faf_cloud_fetch { soul_name: "my-project" }
+          → Context merged into local project.faf
+          ```
+
+          **Zero-install sharing** - Recipients need no MCP setup. Served from 300+ Cloudflare edges with <1ms cold starts via 2.7KB Zig-WASM engine.
+
+          ---
+      - heading: Eternal Bi-Sync
+        body: |-
+          Your `.faf` file and your platform context files stay synchronized in milliseconds.
+
+          ```
+          project.faf  ←── 8ms ──→  .cursorrules / AGENTS.md / CLAUDE.md / GEMINI.md
+                              Single source of truth
+          ```
+
+          - Update either side → both stay aligned
+          - `--all` flag syncs to all four formats at once
+          - Zero manual maintenance
+          - Works across teams, branches, sessions
+
+          AI assistants forget. They drift. Every new session, AI starts guessing again. Bi-sync means **context never goes stale**.
+
+          ---
+      - heading: 'Tier System: From Blind to Optimized'
+        body: |-
+          | Tier | Score | Status |
+          |------|-------|--------|
+          | 🏆 **TROPHY** | 100% | **AI Optimized** — Gold Code |
+          | ★ **GOLD** | 99%+ | Near-perfect context |
+          | ◆ **SILVER** | 95%+ | Excellent |
+          | ◇ **BRONZE** | 85%+ | Production ready |
+          | ● **GREEN** | 70%+ | Solid foundation |
+          | ● **YELLOW** | 55%+ | AI flipping coins |
+          | ○ **RED** | <55% | AI working blind |
+          | ♡ **WHITE** | 0% | No context at all |
+
+          **At 55%, AI is guessing half the time.** At 100%, AI is optimized.
+
+          ---
+      - heading: use>faf | Prompt Pattern
+        body: |-
+          **Start every prompt with "Use FAF"** to invoke MCP tools:
+
+          ```
+          Use FAF to initialize my project
+          Use FAF to score my AI-readiness
+          Use FAF to sync my context
+          Use FAF to enhance my project
+          ```
+
+          Works on all platforms — stops web search, forces tool usage.
+
+          ---
+      - heading: 25 Core MCP Tools
+        body: |-
+          | Tool | Purpose |
+          |------|---------|
+          | `faf_init` | Initialize project.faf |
+          | `faf_score` | Check AI-readiness (0-100%) |
+          | `faf_sync` | Sync context across platforms |
+          | `faf_bi_sync` | Bi-directional .faf ↔ CLAUDE.md |
+          | `faf_enhance` | Intelligent enhancement |
+          | `faf_read` | Parse and validate FAF files |
+          | `faf_write` | Create/update FAF with validation |
+          | **Interop Tools** | |
+          | `faf_agents` | Import/export/sync AGENTS.md |
+          | `faf_cursor` | Import/export/sync .cursorrules |
+          | `faf_gemini` | Import/export/sync GEMINI.md |
+          | `faf_conductor` | Import/export directory structure |
+          | `faf_git` | Generate .faf from GitHub repo URL |
+          | **Cloud Tools** | |
+          | `faf_cloud_publish` | Upload to mcpaas.live |
+          | `faf_cloud_fetch` | Pull from cloud |
+          | `faf_cloud_list` | List souls |
+          | `faf_cloud_search` | Search souls |
+          | `faf_cloud_share` | Generate share links |
+
+          **Plus 36 advanced tools and CLI fallback** (via faf-cli v5.0.1):
+          - `faf readme` - Extract 6 Ws from README (+25-35% boost)
+          - `faf human-add` - Non-interactive YAML merge (6Ws Builder)
+          - `faf git` - GitHub repo analysis without cloning
+          - And 40+ more commands...
+
+          ---
+      - heading: License
+        body: |-
+          MIT License — Free and open source
+
+          ---
+
+          **Zero drift. Eternal sync. AI optimized.** 🏆
+
+          *"It's so logical if it didn't exist, AI would have built it itself" — Claude*
+  - repo: Wolfe-Jam/rust-faf-mcp
+    path: README.md
+    sha: 0ce3b1b3400287a2076db6fd9e80b8abc78f8083
+    intro: ''
+    sections:
+      - heading: rust-faf-mcp
+        body: |-
+          **Persistent Project Context for Rust MCP clients. Native. Fast. cargo install**
+
+          **FAF defines. MD instructs. AI codes.**
+
+          > Stop re-explaining your project to every AI session. One `.faf` file holds your persistent project context. Every AI reads it once and knows what you're building.
+
+          [![FAF](https://mcpaas.live/badge/Wolfe-Jam/rust-faf-mcp.svg)](https://builder.faf.one)
+          [![Crates.io](https://img.shields.io/crates/v/rust-faf-mcp?style=flat-square)](https://crates.io/crates/rust-faf-mcp)
+          [![Tests](https://img.shields.io/badge/tests-112%20passing-brightgreen?style=flat-square)](https://github.com/Wolfe-Jam/rust-faf-mcp)
+          [![IANA](https://img.shields.io/badge/IANA-registered-informational?style=flat-square)](https://www.iana.org/assignments/media-types/application/vnd.faf+yaml)
+          [![License](https://img.shields.io/crates/l/rust-faf-mcp?style=flat-square)](LICENSE)
+
+          Rust-native [MCP](https://modelcontextprotocol.io) (Model Context Protocol) server for [FAF](https://faf.one) — structured AI project context in YAML (`application/vnd.faf+yaml`). Single binary, stdio transport, 4.3 MB stripped. Built on [`rmcp`](https://crates.io/crates/rmcp) and [`faf-rust-sdk`](https://crates.io/crates/faf-rust-sdk).
+      - heading: Claude Code
+        body: |-
+          claude mcp add faf rust-faf-mcp
+          ```
+
+          ```jsonc
+          // WARP / Cursor / Zed / Claude Desktop — any stdio MCP client
+          {
+            "mcpServers": {
+              "faf": {
+                "command": "rust-faf-mcp"
+              }
+            }
+          }
+          ```
+
+          No flags, no config files, no network listener. Pure stdio JSON-RPC.
+
+          Or via Homebrew (macOS, pre-built):
+
+          ```bash
+          brew install Wolfe-Jam/faf/rust-faf-mcp
+          ```
+      - heading: One command, done forever
+        body: |-
+          `faf_auto` detects your project, creates a `.faf`, enhances it to max score, and syncs `CLAUDE.md` — in one shot:
+
+          ```
+          faf_auto complete
+          ━━━━━━━━━━━━━━━━━
+          Score: 0% → 85% (+85) ◇ BRONZE
+          Steps:
+            1. Created project.faf
+            2. Second enhancement pass
+            3. Created CLAUDE.md
+
+          Path: /home/user/my-project
+          ```
+
+          What it produces:
+
+          ```yaml
+      - heading: project.faf — your project, machine-readable
+        body: |-
+          faf_version: "3.3"
+          project:
+            name: my-api
+            goal: REST API for user management
+            main_language: Rust
+            version: "0.1.0"
+            license: MIT
+          instant_context:
+            what_building: REST API for user management
+            tech_stack: Rust 2021
+            key_files:
+              - Cargo.toml
+              - src/main.rs
+              - README.md
+            commands:
+              build: cargo build
+              test: cargo test
+          stack:
+            backend: Rust
+            build_tool: cargo
+          ```
+
+          Every AI agent reads this once and knows exactly what you're building. No 20-minute onboarding. No wrong assumptions.
+      - heading: Create & Detect
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_auto` | Zero to AI context in one command — init, enhance, sync, score, done |
+          | `faf_init` | Create or enhance `project.faf` from `Cargo.toml`, `package.json`, `pyproject.toml`, or `go.mod` |
+          | `faf_git` | Generate `project.faf` from any GitHub repo URL — no clone needed |
+          | `faf_discover` | Walk up the directory tree to find the nearest `project.faf` |
+      - heading: Score & Validate
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_score` | Score AI-readiness 0-100% with field-level breakdown |
+          | `faf_sync` | Sync `project.faf` → `CLAUDE.md` (preserves existing content) |
+      - heading: Optimize
+        body: |-
+          | Tool | What it does |
+          |------|-------------|
+          | `faf_read` | Parse and display `project.faf` contents |
+          | `faf_compress` | Compress `.faf` for token-limited contexts (`minimal` / `standard` / `full`) |
+          | `faf_tokens` | Estimate token count at each compression level |
+
+          `faf_init` is iterative — run it again and it fills in what's missing. Score goes up each time.
+      - heading: Architecture
+        body: |-
+          ```
+          src/
+          ├── main.rs      # ~20 lines — tokio entry, rmcp stdio transport
+          ├── server.rs    # FafServer: #[tool_router], ServerHandler, resources
+          └── tools.rs     # Business logic — all 9 tools, pure functions returning Value
+          ```
+
+          - **Runtime**: `tokio` single-threaded (`current_thread`)
+          - **HTTP**: `reqwest` async (only used by `faf_git` for GitHub API)
+          - **SDK**: `faf-rust-sdk` 1.3 for parsing, validation, compression, discovery
+          - **Server**: `rmcp` 1.1 with `#[tool_router]` macro — handles JSON-RPC, schema generation, transport
+
+          Tools return `serde_json::Value`. The server adapts them to `Result<String, String>` for rmcp's `IntoCallToolResult`.
+      - heading: Testing
+        body: |-
+          112 tests across 6 files:
+
+          ```bash
+          cargo test    # runs all 112
+          ```
+
+          | File | Tests | Coverage |
+          |------|-------|----------|
+          | `mcp_protocol.rs` | 9 | Init handshake, tools/list, resources, schema validation, ID preservation |
+          | `tools_functional.rs` | 25 | All 9 tools — happy path, error paths, language detection |
+          | `tier1_security.rs` | 12 | Path traversal, null bytes, shell injection, oversized input, malformed JSON |
+          | `tier2_engine.rs` | 35 | Corrupt YAML, sync replacement, pipelines, dual manifests, legacy filenames, direct paths |
+          | `tier3_edge_cases.rs` | 10 | Unicode, CJK, score boundaries, unknown fields, GitHub URL parsing |
+          | `tier4_aero.rs` | 21 | Manifest structure, version sync, server.json, manifest-server cross-validation |
+
+          Tests spawn the compiled binary as a subprocess and communicate via stdin/stdout JSON-RPC — true integration tests against the real server.
+      - heading: FAF Ecosystem
+        body: |-
+          One format, every AI platform.
+
+          | Package | Platform | Registry |
+          |---------|----------|----------|
+          | **rust-faf-mcp** | **Rust** | **crates.io** |
+          | [claude-faf-mcp](https://npmjs.com/package/claude-faf-mcp) | Anthropic | npm + MCP #2759 |
+          | [gemini-faf-mcp](https://pypi.org/project/gemini-faf-mcp/) | Google | PyPI |
+          | [grok-faf-mcp](https://npmjs.com/package/grok-faf-mcp) | xAI | npm |
+          | [faf-cli](https://npmjs.com/package/faf-cli) | Universal | npm |
+      - heading: Build from source
+        body: |-
+          ```bash
+          git clone https://github.com/Wolfe-Jam/rust-faf-mcp
+          cd rust-faf-mcp
+          cargo build --release
+      - heading: Binary at target/release/rust-faf-mcp (4.3 MB)
+        body: |-
+          ```
+
+          **Edition**: 2021 | **LTO**: enabled | **Strip**: symbols
+
+          If `rust-faf-mcp` has been useful, consider starring the repo — it helps others find it.
+  - repo: Wolfe-Jam/xai-faf-zeph
+    path: README.md
+    sha: 627cd6feed154ec245379b78f0c0e6ca06e49251
+    intro: 'ZEPH — Ultra Context Layer for FAF: microsecond context ops via pure Zig → WASM, 2.7 KB ghost binary'
+    sections:
+      - heading: ZEPH💨 — Ultra Context Layer (UCL)
+        body: |-
+          **ZEPH — clipped from Zephyrus, Greek god of the west wind.**  
+          The 💨 is the role. The /F/ is the family. Joins **FAF🐘** (memory) as **ZEPH💨** (delivery).
+
+          > **FCL defines. UCL delivers.**  
+          > `.faf` is the substrate. **ZEPH is the engine.**
+
+          **Pure Zig delivery engine. WebAssembly target. 2.7 KB optimized. Three packet exports — `score`, `validate`, `tier`.**
+
+          ZEPH is the performance engine for the **Foundational Context Layer (FCL)**.
+          It turns persistent project DNA (`.faf`) into native-everywhere context operations.
+
+          Measured on a 2019 iMac (Intel i5-7360U @ 2.30 GHz):
+          **native `validate` 6.7 ns · `tier` 4.44 ns · `score` 12 μs on full 21-slot `.faf`.**
+          Live demo runs the same WASM in your browser — click to verify.
+      - heading: Packet menu
+        body: |-
+          One Zig kernel. Three exports. Plain functions on bytes.
+
+          | Packet | Signature | What it does |
+          |---|---|---|
+          | `score`    | `(ptr, len) → u8` | Mk4 score (0..100) on a `.faf` input |
+          | `validate` | `(ptr, len) → u8` | FAFb structural check — `0` valid, `1` bad magic, `2` truncated, `3` invalid version |
+          | `tier`     | `(s: u8) → u8`    | Score → tier byte: 0=White, 1=Red, 2=Yellow, 3=Green, 4=Bronze, 5=Silver, 6=Gold, 7=Trophy |
+
+          "Packet" is API / brand language — never a Zig type. The source is plain `pub export fn`'s on byte slices.
+      - heading: Why ZEPH exists
+        body: |-
+          Context is the highest-leverage knob in the agentic stack.
+          ZEPH makes it **native everywhere** — browser, edge, Node, Bun — while multiplying reasoning, memory, multimodality, and inference efficiency for Grok specifically and frontier agents generally.
+
+          **Current public substrate (MIT, on registries):**
+          - `faf-rust-sdk` v2 (crates.io) — parse / validate / score / FAFb binary
+          - `faf-wasm-sdk` v2 (npm) — same engine, browser / edge / Node / Bun
+          - `grok-faf-mcp` — live MCP server (first MCP for Grok)
+
+          ZEPH completes the picture as the **ultra-low-latency path**.
+
+          **Live demo:** https://xai-faf-zeph.vercel.app/ · https://wolfe-jam.github.io/xai-faf-zeph/
+      - heading: Quickstart
+        body: |-
+          Today: clone + build locally.
+
+          ```bash
+          git clone https://github.com/Wolfe-Jam/xai-faf-zeph.git
+          cd xai-faf-zeph && zig build benchmark
+          ```
+
+          The `cascade.wasm` artifact ships in `docs/`. npm wrapper lives in [`faf-wasm-core`](https://www.npmjs.com/package/faf-wasm-core) v1.1.0 — Stage 2 wiring landed via M7. Both Rust and Zig kernels live behind a single `FafKernel` interface; score parity vs Rust kernel verified.
+      - heading: Benchmarks
+        body: |-
+          Avg time per call. Same input fixtures across runtimes. `score` reads real `.faf` YAML (21-base-slot Mk4 scoring).
+
+          | Packet                       | Native (Zig ReleaseFast) | Node 22.22.2 | Bun 1.3.13 |
+          |------------------------------|-------------------------:|-------------:|-----------:|
+          | `score` (5 pop + 16 ignored) |               12,450 ns  |   29,381 ns  |  21,625 ns |
+          | `score` (21 populated)       |               12,408 ns  |   27,766 ns  |  22,714 ns |
+          | `validate` (32 B baseline)   |                  6.7 ns  |     38.7 ns  |    38.3 ns |
+          | `tier` (u8)                  |                 4.44 ns  |     11.9 ns  |    14.6 ns |
+
+          `validate` and `tier` sit deep under 50 ns across every runtime — single-digit ns native, double-digit ns in WASM. `score` cost is roughly constant in populated count (same parser walk; placeholder / `slotignored` checks are cheap).
+
+          Reproducibility:
+          - Native: `zig build benchmark`
+          - Node: `node benchmarks/bench_js.mjs`
+          - Bun: `bun benchmarks/bench_js.mjs`
+          - Browser: serve repo root (`python3 -m http.server`), open `docs/index.html`, click **RUN ZEPH💨**
+      - heading: Architecture
+        body: |-
+          - **FCL (Foundational Context Layer)**: `.faf` + SDKs — the *what* (project DNA)
+          - **UCL (Ultra Context Layer)**: ZEPH engine — the *speed* (this repo)
+
+          ZEPH is pure Zig compiled to WASM (with native fallback). Zero external dependencies. Single Zig kernel; one WASM artifact; multiple packet-typed exports. FAFb v1 today; v2 lift will follow the spec.
+      - heading: Repository as ongoing collaboration channel
+        body: |-
+          This is **not a code drop**. It is the public, living workspace for the xAI team and contributors to take ZEPH to Colossus and beyond.
+
+          - Issues labeled `xai-priority`, `colossus-scale`, `perf-regression`
+          - RFC process for any change that affects Grok integration
+          - xAI team members welcome as maintainers at any time (transfer path to `github.com/xAI/xai-faf-zeph` ready)
+
+          See [CONTRIBUTING.md](CONTRIBUTING.md) and [ROADMAP.md](ROADMAP.md).
+      - heading: Status
+        body: |-
+          - [x] Scoping accepted
+          - [x] Three packet exports live: `score`, `validate`, `tier`
+          - [x] 2.7 KB `cascade.wasm` shipping in `docs/` — native validate 6.7 ns, tier 4.44 ns, score 12 μs on 21-slot `.faf`
+          - [x] Live browser demo runs all three packets on real `.faf` — Vercel + GH Pages
+          - [x] FAFb v1 validation via `faf-rust-sdk` 2.0.x compatibility (format authority)
+          - [x] `score` parity with `faf-wasm-core` Rust kernel — same `.faf` → same score, byte-equal
+          - [ ] Full FAFb v1 section-table walk + `findSectionByName` packet
+          - [ ] Public npm package
+      - heading: Credits & Doctrine
+        body: |-
+          - Created by wolfejam (the .faf author) in direct collaboration with xAI
+          - Sigil doctrine: every FAF-family brand mark earns a one-character role-compression sigil.  
+            🐘 = never forgets (FAF)  
+            💨 = never delays (ZEPH)
+
+          **ZEPH💨 — Context as breeze.**
+
+          ---
+
+          *Reference thread: https://x.com/wolfe_jam/status/2036534380215050638*  
+          *Working title (GrokX-coined): Context Ultra*  
+          *Plan-B name held in reserve: ZAF*

@@ -1,0 +1,370 @@
+# fafipedia.fafi
+# FAFipedia — curated ecosystem facts about the FAF format and stack.
+#
+# .fafi extension = filesystem inclusion marker only. Content is valid .faf,
+# covered by application/vnd.faf+yaml. Not a new mime-type. Not an IANA
+# registration candidate. Same parser as any .faf file.
+#
+# This is FAFA's curated knowledge layer. Each entry is structured,
+# typed, and provenance-stamped. Drift test: eternal vs time-bound.
+
+format: faf
+version: 1
+type: encyclopedia
+last_checked: 2026-05-16
+
+entries:
+  # === Format & IANA ===
+  - id: iana_faf
+    type: Fact
+    category: format
+    key: application/vnd.faf+yaml
+    value: "IANA registered"
+    eternal: true
+    registered: "2025-10"
+    source: "IANA"
+
+  - id: iana_fafm
+    type: Fact
+    category: format
+    key: application/vnd.fafm+yaml
+    value: "IANA registered"
+    eternal: true
+    registered: "2026-05-13"
+    source: "IANA"
+
+  - id: format_family
+    type: Fact
+    category: architecture
+    key: faf_format_family
+    value:
+      - ".faf — Foundational Context Layer (FCL) — IANA application/vnd.faf+yaml"
+      - ".fafm — Voice Memory Layer (VML) — IANA application/vnd.fafm+yaml"
+      - ".fafb — Binary wire format (Rust) — family extension"
+      - ".fafa — Agent Card format (draft) — family extension"
+      - ".fafg — Grid diagnostic surface (faf-grid, spec-prep) — family extension"
+      - ".fafi — FAFipedia inclusion marker (filesystem only, not a mime-type)"
+    aliases: ["fafg", "faf types", "how many faf types", "faf file extensions", "list the faf file extensions", "the faf family", "faf family members"]
+    eternal: true
+    source: "IANA media-type registry (.faf, .fafm); FAF format-family — extensions ahead of the core .faf SPECIFICATION.md"
+
+  # === FAF "type" axes — disambiguation (format ≠ CLI ≠ MCP ≠ app_type) ===
+  - id: faf_cli_commands
+    type: Fact
+    category: stack
+    key: faf-cli commands
+    value: "faf-cli registers 35 commands (Bun runtime). Bare `faf` = `faf auto`. Commands: agents, ai, auto, bi-sync, check, clear, compile, conductor, context, convert, cursor, decompile, demo, drift, edit, export, formats, gemini, git, go, info, init, migrate, pro, recover, score, search, share, show, status, sync, taf, validate, wjttc, yolo. Run `faf --help` or `faf <cmd> --help` for usage."
+    aliases: ["faf cli commands", "faf commands", "faf-cli commands", "list faf commands", "what commands does faf have", "cli command list", "faf command list", "how many faf commands"]
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (src/cli.ts registered commands)"
+
+  - id: faf_mcp_tools
+    type: Fact
+    category: architecture
+    key: faf mcp tools
+    value: "FAF MCP tool set (the *-faf-mcp FastMCP servers): validate_faf, score_faf, ask, cite, etch_memory, recall_memory. The FAFA agent surface also exposes fafipedia_query. Distinct from the MCP servers — see mcp_family."
+    aliases: ["faf mcp tools", "mcp tools", "list mcp tools", "what mcp tools", "faf agent tools", "fastmcp tools", "how many mcp tools"]
+    eternal: true
+    source: "faf-agent (FastMCP tool set, CLAUDE.md); FAF-Voice direct-xai/api/grok-agent.js (fafipedia_query)"
+
+  - id: faf_app_types
+    type: Fact
+    category: format
+    key: faf app_type taxonomy
+    value: "FAF `app_type:` taxonomy (.faf slot; slot count scales by category). 19 types: about (0-slot, inherited badge), documentation, encyclopedia, cli, library, sdk, wasm, html, frontend, website, mobile, mcp, backend, fullstack, svelte, framework, mcpaas, saas, enterprise."
+    aliases: ["faf app types", "app types", "app_type", "application types", "project types", "what app types", "list app types", "how many app types"]
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (src/core/slots.ts APP_TYPE_CATEGORIES)"
+
+  # Per-entity MCP entries RETIRED 2026-05-18 (SGH README-as-substrate
+  # clean cut). Each *-faf-mcp / ZEPH repo README is now #15 substrate
+  # (reach, not copy). "READMEs are mobile doctrine, approved as
+  # published, not always perfect, but always honest. This is FAFA."
+  # Kept: mcp_family (overview, no single README home) +
+  # anthropic_mcp_2759 (the registry-PR milestone fact).
+
+  # === Architecture & Doctrine ===
+  - id: three_lane_doctrine
+    type: Fact
+    category: philosophy
+    key: three_lane_doctrine
+    value: "FAF defines. MD instructs. AI codes. HTML shows."
+    aliases: ["lane doctrine", "faf lane doctrine", "the lanes", "four lane", "4 lane", "lanes doctrine"]
+    eternal: true
+    source: "FAF core principles"
+
+  - id: mcp_vml_relationship
+    type: Fact
+    category: architecture
+    key: MCP + VML
+    value: "grok-faf-mcp provides Foundational Context Layer. grok-faf-voice provides Voice Memory Layer (VML)."
+    eternal: true
+    source: "FAF architecture"
+
+  - id: mcp_family
+    type: Fact
+    category: architecture
+    key: mcp_family
+    value: "Frontier MCPs (claude-faf-mcp, grok-faf-mcp, gemini-faf-mcp) + FAF-branded MCPs (faf-mcp for Cursor/IDE, rust-faf-mcp for Rust) + MCPaaS platform"
+    eternal: true
+    source: "FAF ecosystem"
+
+  # === MCP & Infrastructure ===
+  - id: anthropic_mcp_2759
+    type: Fact
+    category: ecosystem
+    key: claude-faf-mcp
+    value: "Merged into official Model Context Protocol registry as PR #2759"
+    eternal: true
+    source: "modelcontextprotocol/servers#2759"
+
+  - id: mcpaas_live
+    type: Fact
+    category: infrastructure
+    key: mcpaas.live
+    value: "Sessionless MCP backbone built on Cloudflare Workers + KV"
+    eternal: true
+    source: "mcpaas.live"
+
+  - id: builder_faf_one
+    type: Fact
+    category: infrastructure
+    key: builder.faf.one
+    value: "Live web-based FAF scorer"
+    eternal: true
+    source: "builder.faf.one"
+
+  # === Runtime & Stack (Design Decisions) ===
+  - id: faf_cli_runtime
+    type: Fact
+    category: stack
+    key: faf-cli
+    value: "Implemented in Bun"
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli"
+
+  # === Usage — canonical commands (the front door) ===
+  - id: faf_fastest_way
+    type: Procedure
+    category: stack
+    key: fastest way to add FAF to a project
+    value: "bunx faf — Bun, zero-install, fastest path. `faf` is shorthand for `faf-cli auto` (zero to 100% in one command). Alternatives: npx faf (npm, works everywhere); brew install faf-cli && faf (Homebrew)."
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README — Install)"
+
+  - id: bunx_faf_is_canonical
+    type: Fact
+    category: stack
+    key: bunx faf
+    value: "bunx faf is the canonical, fastest FAF entry point. bunx is the Bun package runner; Bun is faf-cli's runtime. `bunx faf` runs faf-cli with zero install. This is core FAF tooling — NEVER out-of-scope."
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README)"
+
+  - id: faf_install_matrix
+    type: Procedure
+    category: stack
+    key: how to install or run faf-cli
+    value:
+      - "bunx faf — Bun, zero-install, fastest path"
+      - "npx faf — npm, works everywhere"
+      - "brew install faf-cli && faf — Homebrew"
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README — Install)"
+
+  - id: faf_is_faf_cli_auto
+    type: Fact
+    category: stack
+    key: faf command shorthand
+    value: "`faf` is shorthand for `faf-cli auto` — same behavior, fewer keystrokes. Bare `faf` = `faf auto`."
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README)"
+
+  - id: fafb_runtime
+    type: Fact
+    category: stack
+    key: .fafb
+    value: "Rust implementation (binary wire format)"
+    eternal: true
+    source: "FAF specification"
+
+  - id: zeph_runtime
+    type: Fact
+    category: stack
+    key: ZEPH
+    value: "Zig + WASM microsecond context engine"
+    eternal: true
+    source: "github.com/Wolfe-Jam/xai-faf-zeph"
+
+  # === Agent ===
+  - id: fafa_role
+    type: Fact
+    category: agent
+    key: FAFA
+    value: "The Voice of FAF — demonstrates persistent memory via FAFm + VML"
+    eternal: true
+    source: "faf.one/agent"
+
+  - id: vml_purpose
+    type: Fact
+    category: architecture
+    key: Voice Memory Layer
+    value: "Drop-in persistent memory layer for LiveKit + xAI Grok voice agents using .fafm"
+    eternal: true
+    source: "grok-faf-voice"
+
+  # ═══════════════════════════════════════════════════════════════
+  # Proactive seed — top-traffic topics, one-time pass 2026-05-15.
+  # Per fafipedia-targeted-proactive-seed-doctrine. Sourced from ROM
+  # (faf-cli README, locked doctrines). Long tail stays reactive.
+  # ═══════════════════════════════════════════════════════════════
+
+  # === What FAF is / identity ===
+  - id: what_is_faf
+    type: Fact
+    category: format
+    key: what is FAF
+    value: "FAF = Foundational AI-context Format. IANA-registered structured AI context (application/vnd.faf+yaml). Project DNA for ANY AI — a project.faf file that versions with your code so AI starts every session already knowing the project. You have a package.json; AI needs a project.faf."
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README)"
+
+  - id: faf_vrom_tagline
+    type: Fact
+    category: philosophy
+    key: FAF is vROM for AI
+    value: "Canonical tagline. AI without FAF = RAM-only (re-explains every session, the 91% drift tax). AI with FAF = vROM + RAM (boots from a known state)."
+    eternal: true
+    source: "FAF brand register"
+
+  - id: vrom_definition
+    type: Fact
+    category: philosophy
+    key: what is vROM
+    value: "vROM = virtual ROM. Software-defined immutability achieved via schema + git + discipline — NOT silicon. The 'v' is engineering honesty: FAF delivers the ROM contract (read-only, boot-from-known-state) in software. To see your vROM, answer the 6Ws of your project + name your stack; that locked set IS your vROM."
+    eternal: true
+    source: "FAF doctrine (rom-is-vrom)"
+
+  - id: faf_foundational_doctrine
+    type: Fact
+    category: philosophy
+    key: foundational doctrine
+    value: "FAF, the Foundation [6W's definitions, in a stack]. YAML, the language [& YAML-shaped grammar]. Binary, the [inevitable] outcome. — the architectural summary of every FAF surface: author in YAML, run in binary, FAF defines the schema both serve."
+    eternal: true
+    source: "FAF doctrine (faf-foundational-yaml-binary)"
+
+  # === Scoring & validation ===
+  - id: faf_scoring
+    type: Fact
+    category: stack
+    key: how FAF scoring works
+    value: "FAF scores a .faf 0-100% on slot completeness. 100% = 🏆 Trophy = AI never has to guess. From v6.6, Trophy (100%) is the ONLY recommended target — 100% on the Foundational Context Layer is what makes the layers above (MD instructions, agents, AI tooling) work; sub-Trophy leaves gaps AI guesses on. Deterministic — same file, same score, every machine."
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README — Scoring)"
+
+  - id: faf_score_command
+    type: Procedure
+    category: stack
+    key: how to score or validate a .faf
+    value: "Score: faf score (checks AI-readiness 0-100%). Validate: faf check (validates the .faf file). faf = shorthand for faf-cli auto; run via bunx faf or bunx faf-cli. Web scorer: builder.faf.one. FAFA cannot score from chat — route to these surfaces."
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README — Commands & Install); builder.faf.one; FAFA voice contract"
+
+  - id: faf_tier_system
+    type: Fact
+    category: stack
+    key: FAF tier system
+    value:
+      - "🏆 Trophy — 100% — AI never has to guess"
+      - "★ Gold — 99%+ — 1 slot from Trophy"
+      - "◆ Silver — 95%+ — close, keep going"
+      - "◇ Bronze — 85%+ — interim, keep going"
+      - "● Green — 70%+ — interim, keep going"
+      - "● Yellow — 55%+ — AI flipping coins"
+      - "○ Red — <55% — AI working blind"
+      - "♡ White — 0% — no context at all"
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf-cli (README — Scoring); ~/FAF/cli/src/core/tiers.ts"
+
+  # === FAFA agent ===
+  - id: fafa_voice_model
+    type: Fact
+    category: agent
+    key: FAFA voice
+    value: "FAFA's voice is Grok Voice (xAI TTS, voice 'leo' — mellow male) by default, with a free per-visitor preview. After the preview it degrades gracefully to free browser SpeechSynthesis (still male, says the name correctly). Premium-first, graceful degrade — no hard paywall. Preview/cap limits are tunable config, not fixed facts."
+    eternal: true
+    source: "FAF-Voice /api/fafa-tts.js; fafa-voice-tier-model doctrine"
+
+  - id: fafa_persistent_memory
+    type: Fact
+    category: agent
+    key: FAFA persistent memory
+    value: "FAFA remembers across sessions via etch_memory / recall_memory tools backed by mcpaas.live. Ask her to remember a FAF-related fact; recall it in a later session. Memory survives sessions, devices, and model switches via the namepoint."
+    eternal: true
+    source: "FAF-Voice api/grok-agent.js; fafa-memory-deploy-order"
+
+  - id: namepoint_explainer
+    type: Fact
+    category: agent
+    key: what is a namepoint
+    value: "A namepoint is your memory address on mcpaas.live — the soul a FAF agent etches to and recalls from. One namepoint, persistent across every chat, device, and AI. The address that makes 'Permanent Memory + Instant Recall' real."
+    eternal: true
+    source: "grok-faf-voice; mcpaas.live"
+
+  # === FAFipedia architecture ===
+  - id: fafipedia_architecture
+    type: Fact
+    category: architecture
+    key: FAFipedia architecture
+    value:
+      - "Layer 1 — content: Wolfe-Jam/fafipedia (.fafi files, git-versioned source of truth)"
+      - "        │ ingested by"
+      - "Layer 2 — retrieval: Wolfe-Jam/xai-faf-rag (LAZY-RAG cache + Grok Collections)"
+      - "        │ consumed by"
+      - "Layer 3 — agents: FAFA + future FAF agents (pure consumers — never read files directly)"
+      - "Content authoritative, reviewable, portable. Agents query via the retrieval layer, never the files."
+    eternal: true
+    source: "fafipedia-vs-grokipedia-architecture doctrine"
+
+  - id: fafipedia_vs_grokipedia
+    type: Fact
+    category: architecture
+    key: FAFipedia vs Grokipedia
+    value: "Grokipedia is PostgreSQL-coupled, AI-mediated, closed — storage + generation + retrieval entangled. FAFipedia is git-versioned .fafi files, three-layer, open — content decoupled from retrieval, auditable, multi-agent consumable. Grokipedia is the database; FAFipedia is the spec."
+    eternal: true
+    source: "fafipedia-vs-grokipedia-architecture doctrine (Grok-solo + 9-expert review)"
+
+  # === Evergreen Context / drift ===
+  - id: evergreen_context
+    type: Fact
+    category: philosophy
+    key: Evergreen Context
+    value: "The categorical name for facts that don't drift — what .faf carries. Project identity, stack, formats, IANA registrations, founding facts. Distinct from drifting data (counts, versions), soft preferences, and implementation noise."
+    eternal: true
+    source: "evergreen-context-the-category doctrine"
+
+  - id: drift_test
+    type: Fact
+    category: philosophy
+    key: drift test
+    value: "Applied to every FAFipedia entry. Will the value change? No → eternal: true (vROM-correct, no measured date needed). Yes → eternal: false (time-bound, requires a measured: date). The gate that keeps the encyclopedia honest."
+    eternal: true
+    source: "facts-in-faf-are-eternal-zero-drift doctrine"
+
+  # >>> GENERATED faf_index — gen-fafi-index.mjs · DO NOT hand-edit
+  - id: faf_index
+    type: Index
+    category: architecture
+    key: faf_index
+    aliases: ["index", "a-z", "az", "dictionary", "glossary", "list all", "all entries", "table of contents", "what is in fafipedia", "fafipedia index", "how many entries", "directory", "everything you know"]
+    value:
+      - "A-Z (35 entries) — .fafb, application/vnd.faf+yaml, application/vnd.fafm+yaml, builder.faf.one, bunx faf, claude-faf-mcp, drift test, Evergreen Context, faf app_type taxonomy, faf command shorthand, FAF is vROM for AI, faf mcp tools, FAF tier system, faf_format_family, faf-cli, faf-cli commands, FAFA, FAFA persistent memory, FAFA voice, FAFipedia architecture, FAFipedia vs Grokipedia, fastest way to add FAF to a project, foundational doctrine, how FAF scoring works, how to install or run faf-cli, how to score or validate a .faf, MCP + VML, mcp_family, mcpaas.live, three_lane_doctrine, Voice Memory Layer, what is a namepoint, what is FAF, what is vROM, ZEPH"
+      - "Category agent (4) — FAFA, FAFA persistent memory, FAFA voice, what is a namepoint"
+      - "Category architecture (7) — faf mcp tools, faf_format_family, FAFipedia architecture, FAFipedia vs Grokipedia, MCP + VML, mcp_family, Voice Memory Layer"
+      - "Category ecosystem (1) — claude-faf-mcp"
+      - "Category format (4) — application/vnd.faf+yaml, application/vnd.fafm+yaml, faf app_type taxonomy, what is FAF"
+      - "Category infrastructure (2) — builder.faf.one, mcpaas.live"
+      - "Category philosophy (6) — drift test, Evergreen Context, FAF is vROM for AI, foundational doctrine, three_lane_doctrine, what is vROM"
+      - "Category stack (11) — .fafb, bunx faf, faf command shorthand, FAF tier system, faf-cli, faf-cli commands, fastest way to add FAF to a project, how FAF scoring works, how to install or run faf-cli, how to score or validate a .faf, ZEPH"
+    generated: "2026-05-19"
+    eternal: false
+    source: "Generated from fafipedia.fafi entries — deterministic, not hand-maintained (gen-fafi-index.mjs)"
+  # <<< END GENERATED faf_index

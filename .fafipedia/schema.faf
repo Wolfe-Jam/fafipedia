@@ -1,0 +1,23 @@
+# schema.faf — FAFipedia entry schema
+# Measured against live corpus 2026-05-19. Enum values reflect ACTUAL usage,
+# not aspirational. To add a new type or category, propose via PR with the
+# first entry that uses it.
+
+format: faf
+version: 1
+type: schema
+
+fields:
+  id: string                                                  # stable unique key
+  type: enum[Fact, Procedure, Index]                          # entry type
+  category: enum[format, stack, architecture, agent, ecosystem, infrastructure, philosophy]
+  key: string                                                 # the claim's subject
+  value: string | array | object                              # the claim
+  eternal: boolean                                            # true=won't drift; false=time-bound (requires measured)
+  source: string                                              # provenance (never invented)
+  # optional
+  aliases: array[string]                                      # query aliases for matching
+  registered: string?                                         # for IANA / standards entries
+  measured: string?                                           # date measured (required when eternal: false)
+  hardware: string?                                           # measurement context
+  generated: string?                                          # marker for derived entries (e.g., faf_index)

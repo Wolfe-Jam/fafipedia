@@ -1,0 +1,38 @@
+# project.faf — FAFipedia self-description
+faf_version: "2.5.2"
+
+project:
+  name: fafipedia
+  app_type: encyclopedia
+  description: "Curated, structured encyclopedia for the FAF format and ecosystem"
+  repository: "https://github.com/Wolfe-Jam/fafipedia"
+  license: MIT
+  status: live
+
+stack:
+  primary: yaml
+  format: faf
+  validation: python3
+
+architecture:
+  data:
+    - fafipedia.fafi      # curated typed entries (Fact / Procedure / Index)
+    - substrate.fafi      # README-as-substrate bundle (build-time)
+  validation:
+    - .fafipedia/schema.faf
+    - .fafipedia/linter.py
+    - .fafipedia/validate.sh
+  docs:
+    - docs/README.fafa    # agent-targeted consumption README
+
+doctrine:
+  - "FAFipedia is the spec; Grokipedia is the database"
+  - "READMEs are mobile doctrine, approved as published, not always perfect, but always honest"
+  - "Permanent Memory + Instant Recall"
+
+provenance:
+  format: "application/vnd.faf+yaml (IANA registered 2025-10)"
+  spec: "https://github.com/Wolfe-Jam/faf"
+  authors:
+    - "wolfejam (creator)"
+    - "Grok / xAI (co-author, architecture)"

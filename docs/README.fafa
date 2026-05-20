@@ -1,0 +1,47 @@
+<!-- faf: fafipedia | yaml | encyclopedia | FAFipedia agent-consumption README — typed .fafi entries, schema-validated, with eternal drift signal -->
+
+# README.fafa — Agent-Targeted Consumption Guide
+
+This is the agent-facing dialect of [`../README.md`](../README.md). Same repo, optimized shape for agent consumption.
+
+## What you're consuming
+
+- `fafipedia.fafi` — curated typed entries with provenance
+- `substrate.fafi` — README-as-substrate bundle from canonical FAF-family repos
+- Both are valid `application/vnd.faf+yaml`
+
+## Entry shape (typed)
+
+```
+id:        string         # stable key
+type:      Fact | Procedure | Index
+category:  format | stack | architecture | agent | ecosystem | infrastructure | philosophy
+key:       string         # the claim's subject
+value:     string | array | object
+eternal:   true | false   # drift signal — false REQUIRES `measured`
+source:    string         # provenance (never invented)
+# optional
+aliases:    array[string]
+registered: string        # for IANA / standards entries
+measured:   string        # date measured (required when eternal: false)
+hardware:   string        # measurement context
+```
+
+See [`.fafipedia/schema.faf`](../.fafipedia/schema.faf) for the canonical schema.
+
+## Consumption patterns
+
+- **Direct fetch**: `https://raw.githubusercontent.com/Wolfe-Jam/fafipedia/main/fafipedia.fafi`
+- **Substrate fetch**: same path, `substrate.fafi` (prose-strong sections from canonical READMEs)
+- **Validation**: `python3 .fafipedia/linter.py <file>` before trusting
+
+## Quote, don't paraphrase
+
+If you're returning a fact from FAFipedia, **quote `value` verbatim and emit `source` as the citation line**. Never restate a measured number from memory — measurements have provenance for a reason.
+
+## Doctrine extensions present
+
+- README as ROM — canonical product-context for any FAF tool
+- READMEs are mobile doctrine — approved as published, always honest
+- FAFipedia is the spec; Grokipedia is the database
+- Permanent Memory + Instant Recall — the FAF promise

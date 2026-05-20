@@ -15,6 +15,15 @@ last_checked: 2026-05-16
 
 entries:
   # === Format & IANA ===
+  - id: what_is_faf
+    type: Fact
+    category: format
+    key: what is .faf
+    value: ".faf (Foundational AI-context Format) is an IANA-registered open format for AI context — project DNA for any AI. Transform individual files or entire projects into structured data that AI instantly understands. Your tech stack, dependencies, architecture, and goals — all in one concise, shareable format. Instead of explaining your project every time, AI reads your .faf once and knows exactly how to help. project.faf sits right between package.json and README.md — exactly where it belongs."
+    aliases: ["what is faf", "what is .faf", "tell me about faf", "tell me about .faf", "what's faf", "what's .faf", "faf overview", "explain faf", "describe faf", "introduction to faf"]
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf/README.md (What is .faf? section)"
+
   - id: iana_faf
     type: Fact
     category: format
@@ -47,6 +56,15 @@ entries:
     aliases: ["fafg", "faf types", "how many faf types", "faf file extensions", "list the faf file extensions", "the faf family", "faf family members"]
     eternal: true
     source: "IANA media-type registry (.faf, .fafm); FAF format-family — extensions ahead of the core .faf SPECIFICATION.md"
+
+  - id: faf_specification
+    type: Fact
+    category: format
+    key: faf specification
+    value: ".faf Format Specification — the authoritative source for application/vnd.faf+yaml. Defines structure, required fields, scoring system, and the project.faf filename standard. Lives at github.com/Wolfe-Jam/faf/SPECIFICATION.md alongside the canonical README and reference examples."
+    aliases: ["faf spec", "specification", "spec", "SPECIFICATION.md", ".faf format spec", "faf format spec", "what is in the spec", "what is in the faf specification", "faf format specification"]
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf/SPECIFICATION.md"
 
   # === FAF "type" axes — disambiguation (format ≠ CLI ≠ MCP ≠ app_type) ===
   - id: faf_cli_commands

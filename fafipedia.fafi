@@ -398,6 +398,16 @@ entries:
     eternal: true
     source: "facts-in-faf-are-eternal-zero-drift doctrine"
 
+  # === Format versioning ===
+  - id: faf_version_field
+    type: Fact
+    category: format
+    key: faf_version field
+    value: "Every .faf file opens with a faf_version field marking the format generation it was written in. It lets any AI or tool read the file with full confidence about its shape, and it makes .faf forward- and backward-tolerant: the spec requires parsers to ignore unknown fields, so a .faf stays readable across generations — context is never lost to a version bump. The generation is set by the tool that births the file (faf-cli / faf-rust-sdk); .faf files are tool-born, never hand-authored, which is exactly what keeps the field trustworthy. Permanent Memory, Instant Recall."
+    aliases: ["faf_version", "faf version", "what is faf_version", ".faf version", "format version", "faf version field", "what version is my faf", "faf_version field"]
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf (SPECIFICATION.md — faf_version + parser requirements)"
+
   # >>> GENERATED faf_index — gen-fafi-index.mjs · DO NOT hand-edit
   - id: faf_index
     type: Index

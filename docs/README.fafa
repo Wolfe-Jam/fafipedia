@@ -45,3 +45,4 @@ If you're returning a fact from FAFipedia, **quote `value` verbatim and emit `so
 - READMEs are mobile doctrine — approved as published, always honest
 - FAFipedia is the spec; Grokipedia is the database
 - Permanent Memory + Instant Recall — the FAF promise
+- `.fafa` is IANA-registered (`application/vnd.fafa+yaml`, 2026-06-26). Paper: DOI 10.5281/zenodo.21951641

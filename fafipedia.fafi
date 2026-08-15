@@ -11,7 +11,7 @@
 format: faf
 version: 1
 type: encyclopedia
-last_checked: 2026-05-16
+last_checked: 2026-08-15
 
 entries:
   # === Format & IANA ===
@@ -44,6 +44,16 @@ entries:
     registered: "2026-05-13"
     source: "IANA media-type registry"
 
+  - id: iana_fafa
+    type: Fact
+    category: format
+    key: application/vnd.fafa+yaml
+    value: "application/vnd.fafa+yaml — IANA-registered media type for .fafa (Agent Card), registered June 26, 2026. Third FAF family type. Portable agent identity: who the agent is, what it may do, where it is reached."
+    aliases: ["iana fafa", "vnd.fafa+yaml", "fafa media type", "fafa iana", "is fafa iana registered", "agent card iana"]
+    eternal: true
+    registered: "2026-06-26"
+    source: "IANA media-type registry (https://www.iana.org/assignments/media-types/application/vnd.fafa+yaml)"
+
   - id: format_family
     type: Fact
     category: architecture
@@ -53,12 +63,12 @@ entries:
       - ".faf — Foundational Context Layer (FCL) — IANA application/vnd.faf+yaml (registered Oct 2025)"
       - ".fafm — Voice Memory Layer (VML) — IANA application/vnd.fafm+yaml (registered May 2026)"
       - ".fafb — Binary wire format (Rust) — family extension"
-      - ".fafa — Agent Card format — DE review at IANA (RT #1452522)"
+      - ".fafa — Agent Card — IANA application/vnd.fafa+yaml (registered 2026-06-26)"
       - ".fafg — Grid diagnostic surface (faf-grid, spec-prep) — family extension"
       - ".fafi — FAFipedia inclusion marker (filesystem only, not a mime-type)"
     aliases: ["fafg", "faf types", "how many faf types", "faf file extensions", "list the faf file extensions", "the faf family", "faf family members", "faf family", "format family", "faf format family", "what file types does faf have"]
     eternal: true
-    source: "IANA media-type registry (.faf, .fafm); FAF format-family — extensions ahead of the core .faf SPECIFICATION.md"
+    source: "IANA media-type registry (.faf, .fafm, .fafa); FAF format-family — extensions ahead of the core .faf SPECIFICATION.md"
 
   - id: faf_specification
     type: Fact
@@ -68,6 +78,33 @@ entries:
     aliases: ["faf spec", "specification", "spec", "SPECIFICATION.md", ".faf format spec", "faf format spec", "what is in the spec", "what is in the faf specification", "faf format specification"]
     eternal: true
     source: "github.com/Wolfe-Jam/faf/SPECIFICATION.md"
+
+  - id: what_is_fafa
+    type: Fact
+    category: format
+    key: what is .fafa
+    value: ".fafa is the Agent Card format of the FAF family (application/vnd.fafa+yaml, IANA-registered 2026-06-26). Portable identity: who the agent is, what it may do, where it is reached. Complements AGENTS.md (how to work in a repo) and protocol cards (A2A Agent Cards, MCP server-cards). Standard filename: agent.fafa. Live at https://faf.one/.well-known/fafa."
+    aliases: ["fafa", "what is fafa", "agent card format", "agent.fafa", "fafa format", "what is the fafa format"]
+    eternal: true
+    source: "github.com/Wolfe-Jam/faf/AGENT-FORMAT.md; DOI 10.5281/zenodo.21951641"
+
+  - id: fafa_passport_paper
+    type: Fact
+    category: agent
+    key: Why Agents Need a Passport
+    value: "Zenodo working paper specifying .fafa as portable agent identity. Complementary to Agent Cards, MCP server-cards, and AGENTS.md. DOI 10.5281/zenodo.21951641. Published 2026-08-15. Title: Why Agents Need a Passport: .fafa — Portable Identity for the Agentic Era."
+    aliases: ["fafa paper", "agents paper", "passport paper", "why agents need a passport", ".fafa paper"]
+    eternal: true
+    source: "https://doi.org/10.5281/zenodo.21951641"
+
+  - id: rom_cartridge
+    type: Fact
+    category: philosophy
+    key: ROM cartridge
+    value: "A FAF Agent is a ROM Cartridge — domain corpus + Soul + citations plugged into the MCP chassis. Insert cartridge, load the game. FAFA is the FAF-spec cartridge. Same console, this game."
+    aliases: ["cartridge", "rom cartridge", "vROM cartridge", "what is a rom cartridge"]
+    eternal: true
+    source: "FAF doctrine (agents-are-rom-cartridges)"
 
   # === FAF "type" axes — disambiguation (format ≠ CLI ≠ MCP ≠ app_type) ===
   - id: faf_cli_commands
@@ -243,8 +280,8 @@ entries:
     type: Fact
     category: agent
     key: FAFA
-    value: "FAFA — The Voice of FAF. The agent that demonstrates persistent memory via .fafm + VML (Voice Memory Layer). Runs on xAI Grok Realtime; voice = Leo (Grok's default), text default = grok-4.20-0309-non-reasoning. \"Context made audible. Memory that speaks.\" FAFA is vROM made audible — format (.faf), protocol (MCP), and engine (ZEPH) come together as something you can talk to. Live at direct-xai.vercel.app."
-    aliases: ["fafa", "FAFA", "what is fafa", "what is FAFA", "the voice of faf", "voice of faf", "tell me about fafa", "tell me about FAFA", "fafa agent", "faf agent", "faf voice", "the faf agent"]
+    value: "FAFA — The Voice of FAF. ROM cartridge on the MCP chassis: Soul + citations + FAFipedia. Cite-or-refuse agent for the .faf family. Passport is application/vnd.fafa+yaml (IANA 2026-06-26). Paper: DOI 10.5281/zenodo.21951641. Install: uvx faf-agent-mcp. Live at faf.one/agent."
+    aliases: ["FAFA", "what is FAFA", "the voice of faf", "voice of faf", "tell me about FAFA", "fafa agent", "faf agent", "the faf agent"]
     eternal: true
     source: "github.com/Wolfe-Jam/FAF-Voice (README + ABOUT.md)"
 
@@ -415,15 +452,15 @@ entries:
     key: faf_index
     aliases: ["index", "a-z", "az", "dictionary", "glossary", "list all", "all entries", "table of contents", "what is in fafipedia", "fafipedia index", "how many entries", "directory", "everything you know"]
     value:
-      - "A-Z (35 entries) — .fafb, application/vnd.faf+yaml, application/vnd.fafm+yaml, builder.faf.one, bunx faf, claude-faf-mcp, drift test, Evergreen Context, faf app_type taxonomy, faf command shorthand, FAF is vROM for AI, faf mcp tools, FAF tier system, faf_format_family, faf-cli, faf-cli commands, FAFA, FAFA persistent memory, FAFA voice, FAFipedia architecture, FAFipedia vs Grokipedia, fastest way to add FAF to a project, foundational doctrine, how FAF scoring works, how to install or run faf-cli, how to score or validate a .faf, MCP + VML, mcp_family, mcpaas.live, three_lane_doctrine, Voice Memory Layer, what is a namepoint, what is FAF, what is vROM, ZEPH"
-      - "Category agent (4) — FAFA, FAFA persistent memory, FAFA voice, what is a namepoint"
-      - "Category architecture (7) — faf mcp tools, faf_format_family, FAFipedia architecture, FAFipedia vs Grokipedia, MCP + VML, mcp_family, Voice Memory Layer"
-      - "Category ecosystem (1) — claude-faf-mcp"
-      - "Category format (4) — application/vnd.faf+yaml, application/vnd.fafm+yaml, faf app_type taxonomy, what is FAF"
+      - "A-Z (44 entries) — .fafb, application/vnd.faf+yaml, application/vnd.fafa+yaml, application/vnd.fafm+yaml, builder.faf.one, bunx faf, claude-faf-mcp, drift tax (AI without FAF), drift test, Evergreen Context, faf app_type taxonomy, faf command shorthand, FAF is vROM for AI, faf mcp tools, faf specification, FAF tier system, faf_format_family, faf_version field, faf-cli, faf-cli commands, FAFA, FAFA persistent memory, FAFA voice, FAFipedia architecture, FAFipedia vs Grokipedia, fastest way to add FAF to a project, foundational doctrine, grok-faf-mcp, how FAF scoring works, how to install or run faf-cli, how to score or validate a .faf, MCP + VML, mcp_family, mcpaas.live, ROM cartridge, three_lane_doctrine, Voice Memory Layer, what is .faf, what is .fafa, what is a namepoint, what is MCP, what is vROM, Why Agents Need a Passport, ZEPH"
+      - "Category agent (5) — FAFA, FAFA persistent memory, FAFA voice, what is a namepoint, Why Agents Need a Passport"
+      - "Category architecture (8) — faf mcp tools, faf_format_family, FAFipedia architecture, FAFipedia vs Grokipedia, MCP + VML, mcp_family, Voice Memory Layer, what is MCP"
+      - "Category ecosystem (2) — claude-faf-mcp, grok-faf-mcp"
+      - "Category format (8) — application/vnd.faf+yaml, application/vnd.fafa+yaml, application/vnd.fafm+yaml, faf app_type taxonomy, faf specification, faf_version field, what is .faf, what is .fafa"
       - "Category infrastructure (2) — builder.faf.one, mcpaas.live"
-      - "Category philosophy (6) — drift test, Evergreen Context, FAF is vROM for AI, foundational doctrine, three_lane_doctrine, what is vROM"
+      - "Category philosophy (8) — drift tax (AI without FAF), drift test, Evergreen Context, FAF is vROM for AI, foundational doctrine, ROM cartridge, three_lane_doctrine, what is vROM"
       - "Category stack (11) — .fafb, bunx faf, faf command shorthand, FAF tier system, faf-cli, faf-cli commands, fastest way to add FAF to a project, how FAF scoring works, how to install or run faf-cli, how to score or validate a .faf, ZEPH"
-    generated: "2026-05-19"
+    generated: "2026-08-15"
     eternal: false
     source: "Generated from fafipedia.fafi entries — deterministic, not hand-maintained (gen-fafi-index.mjs)"
   # <<< END GENERATED faf_index
